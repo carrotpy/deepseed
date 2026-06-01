@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(sed -n '116,160p' /Users/dhilip.r/Desktop/Personal/personal_repo/deepseek_test/assets/css/style.css)",
+      "Bash(sed -n '272,300p' /Users/dhilip.r/Desktop/Personal/personal_repo/deepseek_test/assets/css/style.css)",
+      "Bash(sed -n '399,455p' /Users/dhilip.r/Desktop/Personal/personal_repo/deepseek_test/assets/css/style.css)"
+    ]
+  }
+}

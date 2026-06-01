@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>Deepseed Technologies LLP — Elite Robotics Engineering &amp; Digital Growth</title>
+  <meta name="description" content="Deepseed Technologies engineers smart autonomous systems, builds scalable software, and deploys data-driven marketing funnels. Robotics training, R&amp;D, industrial automation, software development, and digital marketing under one roof." />
+  <meta name="keywords" content="robotics engineering, industrial automation, software development, digital marketing, robotics training academy, Arduino, Raspberry Pi, Python, web applications, lead generation" />
+  <meta name="author" content="Deepseed Technologies LLP" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://deepseedtech.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://deepseedtech.in/" />
+  <meta property="og:title"       content="Deepseed Technologies LLP — Elite Robotics Engineering &amp; Digital Growth" />
+  <meta property="og:description" content="We engineer smart autonomous systems, build scalable software, and deploy data-driven marketing funnels. From youth robotics training to enterprise automation." />
+  <meta property="og:image"       content="https://deepseedtech.in/assets/images/og-image.png" />
+  <meta property="og:site_name"   content="Deepseed Technologies" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Deepseed Technologies LLP" />
+  <meta name="twitter:description" content="Elite Robotics Engineering &amp; Digital Growth" />
+  <meta name="twitter:image"       content="https://deepseedtech.in/assets/images/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Deepseed Technologies LLP",
+    "url": "https://deepseedtech.in",
+    "description": "Elite Robotics Engineering, Industrial Automation, Software Development, Digital Marketing, and Robotics Training Academy.",
+    "slogan": "Sowing Innovation. Engineering Reality.",
+    "foundingDate": "2023",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hello@deepseedtech.in"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/deepseed-technologies",
+      "https://twitter.com/deepseedtech"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   { DEFAULT: '#3B82F6', dark: '#1D4ED8', light: '#93C5FD' },
+            secondary: { DEFAULT: '#FFFFFF', dark: '#E2E8F0' },
+            accent:    { DEFAULT: '#60A5FA', dark: '#3B82F6' },
+            surface:   { DEFAULT: '#080C18', card: '#0D1526',  border: '#1E293B' },
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body:    ['Inter',         'sans-serif'],
+          },
+          maxWidth: { '8xl': '1400px' },
+        }
+      }
+    }
+  </script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Replace YOUR_PUBLIC_KEY with your EmailJS public key
+    (function(){ emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' }); })();
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-surface text-slate-100 font-body antialiased">
+
+  <!-- CURSOR GLOW -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       PALETTE PICKER (always visible — dark + light sections)
+  ============================================================ -->
+  <div id="palette-picker" aria-label="Choose colour palette" role="complementary">
+    <button id="palette-toggle" aria-label="Open palette picker">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="7.5" cy="10" r="2" fill="#3B82F6"/>
+        <circle cx="16.5" cy="10" r="2" fill="#8B5CF6"/>
+        <circle cx="12" cy="17" r="2" fill="#10B981"/>
+      </svg>
+      <span>Palette</span>
+    </button>
+
+    <div id="palette-panel">
+
+      <!-- ── DARK THEME SWATCHES ── -->
+      <p class="pp-label pp-label--dark">Dark Theme</p>
+      <div class="pp-swatches-dark">
+
+        <button class="pp-swatch pp-dark-swatch pp-swatch--active-dark" data-dpalette="default" title="Midnight Blue">
+          <span class="pp-swatch__colors">
+            <span style="background:#080C18"></span>
+            <span style="background:#3B82F6"></span>
+            <span style="background:#93C5FD"></span>
+          </span>
+          <span class="pp-swatch__name">Midnight</span>
+        </button>
+
+        <button class="pp-swatch pp-dark-swatch" data-dpalette="purple" title="Cosmic Purple">
+          <span class="pp-swatch__colors">
+            <span style="background:#0D0B1A"></span>
+            <span style="background:#8B5CF6"></span>
+            <span style="background:#C4B5FD"></span>
+          </span>
+          <span class="pp-swatch__name">Cosmic</span>
+        </button>
+
+        <button class="pp-swatch pp-dark-swatch" data-dpalette="teal" title="Deep Teal">
+          <span class="pp-swatch__colors">
+            <span style="background:#031017"></span>
+            <span style="background:#06B6D4"></span>
+            <span style="background:#67E8F9"></span>
+          </span>
+          <span class="pp-swatch__name">Deep Teal</span>
+        </button>
+
+        <button class="pp-swatch pp-dark-swatch" data-dpalette="forest" title="Forest Night">
+          <span class="pp-swatch__colors">
+            <span style="background:#030F09"></span>
+            <span style="background:#10B981"></span>
+            <span style="background:#6EE7B7"></span>
+          </span>
+          <span class="pp-swatch__name">Forest</span>
+        </button>
+
+        <button class="pp-swatch pp-dark-swatch" data-dpalette="crimson" title="Crimson Night">
+          <span class="pp-swatch__colors">
+            <span style="background:#150508"></span>
+            <span style="background:#F43F5E"></span>
+            <span style="background:#FDA4AF"></span>
+          </span>
+          <span class="pp-swatch__name">Crimson</span>
+        </button>
+
+        <button class="pp-swatch pp-dark-swatch" data-dpalette="amber" title="Amber Dark">
+          <span class="pp-swatch__colors">
+            <span style="background:#130E02"></span>
+            <span style="background:#F59E0B"></span>
+            <span style="background:#FDE68A"></span>
+          </span>
+          <span class="pp-swatch__name">Amber</span>
+        </button>
+
+      </div>
+
+      <div class="pp-section-divider"></div>
+
+      <!-- ── LIGHT THEME SWATCHES ── -->
+      <p class="pp-label pp-label--light">Light Theme</p>
+      <div class="pp-swatches-light">
+
+        <button class="pp-swatch pp-light-swatch pp-swatch--active-light" data-lpalette="default" title="Clean Professional">
+          <span class="pp-swatch__colors">
+            <span style="background:#F8FAFC"></span>
+            <span style="background:#2563EB"></span>
+            <span style="background:#0F172A"></span>
+          </span>
+          <span class="pp-swatch__name">Professional</span>
+        </button>
+
+        <button class="pp-swatch pp-light-swatch" data-lpalette="ocean" title="Ocean Blue">
+          <span class="pp-swatch__colors">
+            <span style="background:#F0F9FF"></span>
+            <span style="background:#0284C7"></span>
+            <span style="background:#0C1A2E"></span>
+          </span>
+          <span class="pp-swatch__name">Ocean</span>
+        </button>
+
+        <button class="pp-swatch pp-light-swatch" data-lpalette="violet" title="Deep Violet">
+          <span class="pp-swatch__colors">
+            <span style="background:#F5F3FF"></span>
+            <span style="background:#7C3AED"></span>
+            <span style="background:#1E1B4B"></span>
+          </span>
+          <span class="pp-swatch__name">Violet</span>
+        </button>
+
+        <button class="pp-swatch pp-light-swatch" data-lpalette="emerald" title="Forest Emerald">
+          <span class="pp-swatch__colors">
+            <span style="background:#F0FDF4"></span>
+            <span style="background:#059669"></span>
+            <span style="background:#052E16"></span>
+          </span>
+          <span class="pp-swatch__name">Emerald</span>
+        </button>
+
+        <button class="pp-swatch pp-light-swatch" data-lpalette="rose" title="Rose Quartz">
+          <span class="pp-swatch__colors">
+            <span style="background:#FFF1F2"></span>
+            <span style="background:#E11D48"></span>
+            <span style="background:#1C0A0E"></span>
+          </span>
+          <span class="pp-swatch__name">Rose</span>
+        </button>
+
+        <button class="pp-swatch pp-light-swatch" data-lpalette="warm" title="Warm Neutral">
+          <span class="pp-swatch__colors">
+            <span style="background:#FAFAF7"></span>
+            <span style="background:#D97706"></span>
+            <span style="background:#1C1917"></span>
+          </span>
+          <span class="pp-swatch__name">Warm</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================ -->
+  <div id="preloader" role="status" aria-label="Loading Deepseed Technologies">
+    <div class="relative flex items-center justify-center">
+      <div class="preloader-ring"></div>
+      <span class="preloader-logo">DS</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a href="#home" class="flex items-center flex-shrink-0" aria-label="Deepseed Technologies — Home">
+          <img src="assets/images/logo-icon.png" alt="Deepseed Technologies" class="nav-logo-icon h-24 w-24 object-contain"/>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Primary navigation">
+          <a href="#about"      class="nav-link" data-section="about">About</a>
+          <a href="#services"   class="nav-link" data-section="services">Services</a>
+          <a href="#process"    class="nav-link" data-section="process">Process</a>
+          <a href="#why-us"     class="nav-link" data-section="why-us">Why Us</a>
+          <a href="#portfolio"  class="nav-link" data-section="portfolio">Portfolio</a>
+          <a href="#contact"    class="nav-link" data-section="contact">Contact</a>
+        </nav>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden md:inline-flex btn-primary text-sm py-2.5 px-5" aria-label="Get started with Deepseed Technologies">
+            Get Started
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <!-- Theme toggle -->
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+            <!-- Moon (shown in dark mode) -->
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M15.5 11.5A7 7 0 016.5 2.5a7 7 0 000 13 7 7 0 009-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!-- Sun (shown in light mode) -->
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.2 3.2l1.4 1.4M13.4 13.4l1.4 1.4M3.2 14.8l1.4-1.4M13.4 4.6l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- Hamburger -->
+          <button id="hamburger" class="hamburger lg:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="mobile-close" class="absolute top-5 right-5 p-2" aria-label="Close navigation menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <!-- Mobile menu logo -->
+    <div class="flex items-center gap-3 mb-6 pt-1">
+      <img src="assets/images/logo-icon.png" alt="Deepseed Technologies" class="nav-logo-icon h-10 w-10 object-contain"/>
+      <img src="assets/images/logo-name.png" alt="" aria-hidden="true" class="nav-logo-name h-6 object-contain"/>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="#home"      class="mobile-nav-link">Home</a>
+      <a href="#about"     class="mobile-nav-link">About</a>
+      <a href="#services"  class="mobile-nav-link">Services</a>
+      <a href="#process"   class="mobile-nav-link">Process</a>
+      <a href="#why-us"    class="mobile-nav-link">Why Us</a>
+      <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="#contact"   class="mobile-nav-link">Contact</a>
+    </nav>
+    <a href="#contact" class="btn-primary mt-4" onclick="document.getElementById('mobile-menu').classList.remove('open')">Request Consultation</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden bg-grid pt-20" aria-label="Hero">
+
+      <!-- Particle Canvas -->
+      <canvas id="hero-particles" aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+      <!-- Background Orbs -->
+      <div aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <!-- Hero logo watermark -->
+      <div class="hero-logo-mark" aria-hidden="true">
+        <img src="assets/images/logo-icon.png" alt="" class="w-full h-full object-contain"/>
+      </div>
+
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <!-- Left: Copy -->
+          <div>
+            <!-- Label -->
+            <div class="reveal inline-flex items-center gap-2 mb-6">
+              <span class="trust-badge">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                  <circle cx="5" cy="5" r="4" fill="#93C5FD" opacity="0.8"/>
+                </svg>
+                Five Technology Divisions
+              </span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="reveal section-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-slate-100 mb-6" style="--delay:0.1s">
+              Seeding the Future<br class="hidden sm:block"/>
+              of <span class="gradient-text">Technology</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="reveal text-slate-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl" style="--delay:0.2s">
+              We engineer smart autonomous systems, build scalable software, and deploy data-driven marketing funnels. From empowering the next generation to optimizing enterprise workflows — we turn complex challenges into <span class="text-blue-300 font-medium">automated realities</span>.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="reveal flex flex-wrap gap-4 mb-12" style="--delay:0.3s">
+              <div class="magnetic-wrap">
+                <a href="#contact" class="btn-primary">
+                  Request a System Consultation
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="magnetic-wrap">
+                <a href="#services" class="btn-ghost">
+                  Explore Our Academy
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M7 2L12 7L7 12M2 7H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="reveal flex flex-wrap gap-3" style="--delay:0.4s">
+              <span class="trust-badge">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round"/></svg>
+                5 Service Pillars
+              </span>
+              <span class="trust-badge">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Ages 7–18+ Training
+              </span>
+              <span class="trust-badge">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Industrial Automation
+              </span>
+              <span class="trust-badge">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Full-Stack Digital
+              </span>
+            </div>
+          </div>
+
+          <!-- Right: Five Divisions Hub Card -->
+          <div class="reveal from-right" style="--delay:0.2s" aria-hidden="true">
+            <div class="hub-card">
+
+              <!-- Glowing orb background -->
+              <div class="hub-card__orb hub-card__orb--1" aria-hidden="true"></div>
+              <div class="hub-card__orb hub-card__orb--2" aria-hidden="true"></div>
+
+              <!-- Header -->
+              <div class="hub-card__header">
+                <div class="hub-card__logo-wrap">
+                  <img src="assets/images/logo-icon.png" alt="" class="hub-card__logo-img"/>
+                </div>
+                <div>
+                  <p class="hub-card__brand">Deepseed Technologies</p>
+                  <p class="hub-card__tagline">Sowing Innovation. Engineering Reality.</p>
+                </div>
+                <span class="hub-card__live">● Live</span>
+              </div>
+
+              <!-- 5 Division rows -->
+              <div class="hub-card__divisions">
+
+                <div class="hub-card__div" style="--dc:#8B5CF6">
+                  <div class="hub-card__div-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M2 12l10 5 10-5"/></svg>
+                  </div>
+                  <div class="hub-card__div-body">
+                    <span class="hub-card__div-name">Robotics Training Academy</span>
+                    <span class="hub-card__div-sub">Ages 7–18+ · 3 learning tracks</span>
+                  </div>
+                  <span class="hub-card__div-tag">Enrolling</span>
+                </div>
+
+                <div class="hub-card__div" style="--dc:#3B82F6">
+                  <div class="hub-card__div-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                  </div>
+                  <div class="hub-card__div-body">
+                    <span class="hub-card__div-name">Robotics R&amp;D</span>
+                    <span class="hub-card__div-sub">Arduino · ROS · Computer Vision</span>
+                  </div>
+                  <span class="hub-card__div-tag">Active</span>
+                </div>
+
+                <div class="hub-card__div" style="--dc:#06B6D4">
+                  <div class="hub-card__div-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <div class="hub-card__div-body">
+                    <span class="hub-card__div-name">Industrial Automation</span>
+                    <span class="hub-card__div-sub">PLC · IoT · Smart Factory</span>
+                  </div>
+                  <span class="hub-card__div-tag">Active</span>
+                </div>
+
+                <div class="hub-card__div" style="--dc:#10B981">
+                  <div class="hub-card__div-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                  <div class="hub-card__div-body">
+                    <span class="hub-card__div-name">Software Development</span>
+                    <span class="hub-card__div-sub">Web · Mobile · SaaS platforms</span>
+                  </div>
+                  <span class="hub-card__div-tag">Active</span>
+                </div>
+
+                <div class="hub-card__div" style="--dc:#F59E0B">
+                  <div class="hub-card__div-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <div class="hub-card__div-body">
+                    <span class="hub-card__div-name">Digital Marketing</span>
+                    <span class="hub-card__div-sub">SEO · Paid Ads · Growth funnels</span>
+                  </div>
+                  <span class="hub-card__div-tag">Active</span>
+                </div>
+
+              </div>
+
+              <!-- Bottom stats bar -->
+              <div class="hub-card__stats">
+                <div class="hub-card__stat">
+                  <span class="hub-card__stat-num" data-count="5" data-suffix="">5</span>
+                  <span class="hub-card__stat-label">Divisions</span>
+                </div>
+                <div class="hub-card__stat-sep"></div>
+                <div class="hub-card__stat">
+                  <span class="hub-card__stat-num" data-count="70" data-suffix="%">70%</span>
+                  <span class="hub-card__stat-label">Cost Savings</span>
+                </div>
+                <div class="hub-card__stat-sep"></div>
+                <div class="hub-card__stat">
+                  <span class="hub-card__stat-num" data-count="500" data-suffix="+">500+</span>
+                  <span class="hub-card__stat-label">Students</span>
+                </div>
+                <div class="hub-card__stat-sep"></div>
+                <div class="hub-card__stat">
+                  <span class="hub-card__stat-num">24/7</span>
+                  <span class="hub-card__stat-label">Support</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SVG Divider -->
+    <div class="section-divider -mt-1" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#131210" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <!-- ============================================================
+         ABOUT / CORE PHILOSOPHY
+    ============================================================ -->
+    <section id="about" class="py-24 lg:py-32 relative overflow-hidden" aria-labelledby="about-heading">
+      <!-- Background glow -->
+      <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 70%);" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+
+          <!-- LEFT — bold statement + stats (3/5 width) -->
+          <div class="lg:col-span-3 reveal" style="--delay:0s">
+            <span class="section-label">Who We Are</span>
+
+            <h2 id="about-heading" class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-100 mt-4 mb-6 leading-tight">
+              We don't adapt<br>to the future —<br>
+              <span class="gradient-text">we engineer it.</span>
+            </h2>
+
+            <p class="text-slate-400 text-lg leading-relaxed mb-3">
+              Deepseed Technologies LLP is a unified technology hub spanning robotics, industrial automation, software, and digital marketing.
+            </p>
+            <p class="text-slate-400 leading-relaxed mb-10">
+              We bridge the physical and digital worlds — designing custom hardware, writing high-performance software, automating client acquisition, and running an elite STEM training academy, all under one roof.
+            </p>
+
+            <!-- Stats 2×2 -->
+            <div class="grid grid-cols-2 gap-6 mb-10">
+              <div class="reveal" style="--delay:0.1s">
+                <div class="about-stat-number gradient-text font-heading" data-count="5" data-suffix="+">5+</div>
+                <p class="text-slate-500 text-sm mt-1 font-medium uppercase tracking-wider">Service Divisions</p>
+              </div>
+              <div class="reveal" style="--delay:0.15s">
+                <div class="about-stat-number gradient-text font-heading" data-count="70" data-suffix="%">70%</div>
+                <p class="text-slate-500 text-sm mt-1 font-medium uppercase tracking-wider">Cost Reduction</p>
+              </div>
+              <div class="reveal" style="--delay:0.2s">
+                <div class="about-stat-number gradient-text font-heading" data-count="100" data-suffix="%">100%</div>
+                <p class="text-slate-500 text-sm mt-1 font-medium uppercase tracking-wider">Safety Compliance</p>
+              </div>
+              <div class="reveal" style="--delay:0.25s">
+                <div class="about-stat-number gradient-text font-heading" style="font-size:3rem">1</div>
+                <p class="text-slate-500 text-sm mt-1 font-medium uppercase tracking-wider">Unified Tech Hub</p>
+              </div>
+            </div>
+
+            <!-- Challenge vs Solution — compact inline row -->
+            <div class="flex flex-wrap gap-3">
+              <div class="flex items-center gap-2 bg-red-500/8 border border-red-500/15 rounded-full px-4 py-2">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2L13 12H1L7 2Z" stroke="#EF4444" stroke-width="1.2" stroke-linejoin="round"/><path d="M7 6V8.5M7 10V10.5" stroke="#EF4444" stroke-width="1.2" stroke-linecap="round"/></svg>
+                <span class="text-red-400 text-xs font-medium">Legacy systems trap growth</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-500 text-xs self-center" aria-hidden="true">→</div>
+              <div class="flex items-center gap-2 bg-blue-500/8 border border-blue-500/15 rounded-full px-4 py-2">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7l3 3 6-6" stroke="#3B82F6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="text-blue-400 text-xs font-medium">Deepseed engineers the fix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT — Vision + Approach cards (2/5 width) -->
+          <div class="lg:col-span-2 flex flex-col gap-6 reveal" style="--delay:0.2s">
+
+            <!-- Vision card -->
+            <div class="glass-card p-7 border-l-2 border-primary">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="9" cy="9" r="3.5" stroke="#3B82F6" stroke-width="1.4"/>
+                    <path d="M9 1.5V3M9 15V16.5M1.5 9H3M15 9H16.5M3.2 3.2L4.4 4.4M13.6 13.6L14.8 14.8M3.2 14.8L4.4 13.6M13.6 4.4L14.8 3.2" stroke="#60A5FA" stroke-width="1.4" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <span class="font-heading font-semibold text-slate-100 text-base">Our Vision</span>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                To serve as a premier global catalyst for technological advancement — fostering an ecosystem where youth discover their inventive potential and industries evolve through intelligent, automated systems.
+              </p>
+            </div>
+
+            <!-- Approach card -->
+            <div class="glass-card p-7 border-l-2 border-primary">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <path d="M3 15V10M7 15V6M11 15V9M15 15V3" stroke="#3B82F6" stroke-width="1.4" stroke-linecap="round"/>
+                    <circle cx="3" cy="8" r="1.5" fill="#60A5FA" opacity="0.7"/>
+                    <circle cx="7" cy="4" r="1.5" fill="#60A5FA" opacity="0.7"/>
+                    <circle cx="11" cy="7" r="1.5" fill="#3B82F6"/>
+                    <circle cx="15" cy="1.5" r="1.5" fill="#3B82F6"/>
+                  </svg>
+                </div>
+                <span class="font-heading font-semibold text-slate-100 text-base">Our Approach</span>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed mb-3">
+                <span class="text-blue-300 font-medium">Industry-Driven Education:</span> Methodologies from real industrial robotics and web architecture feed directly into our academy classrooms.
+              </p>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                <span class="text-blue-300 font-medium">Unified Execution:</span> Hardware + software + marketing — all under one roof, one team, one vision.
+              </p>
+            </div>
+
+            <!-- About visual image -->
+            <div class="rounded-2xl overflow-hidden border border-white/8 mt-2">
+              <img src="assets/images/about-pillars.jpg" alt="Deepseed Technologies — Five Pillars United" class="w-full object-cover" loading="lazy" style="max-height:200px;"/>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES — TABBED PANEL
+    ============================================================ -->
+    <section id="services" class="py-24 lg:py-32 bg-slate-900/30" aria-labelledby="services-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="text-center mb-14 reveal">
+          <span class="section-label">What We Do</span>
+          <h2 id="services-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
+            Five Core <span class="gradient-text">Service Pillars</span>
+          </h2>
+          <p class="text-slate-400 max-w-xl mx-auto mt-4 text-sm leading-relaxed">
+            An integrated ecosystem built to engineer, automate, and scale your operations end-to-end.
+          </p>
+        </div>
+
+        <!-- All 5 pillars grid -->
+        <div class="services-grid">
+
+          <!-- Card 1 — Academy · VIOLET (featured) -->
+          <article class="pillar-card pillar-card--violet pillar-card--featured reveal" style="--delay:0s" aria-label="Robotics Skills Training Academy">
+            <img src="assets/images/svc-academy.jpg" alt="Robotics Skills Training Academy" class="pillar-card__photo"/>
+            <div class="pillar-card__scrim"></div>
+            <div class="pillar-card__tint"></div>
+            <span class="pillar-card__num">01</span>
+            <div class="pillar-card__body">
+              <h3 class="pillar-card__title">Robotics Skills Training Academy</h3>
+              <p class="pillar-card__tagline">Igniting Curiosity, Coding Creators</p>
+              <p class="pillar-card__desc">We transition students from passive consumers into active engineers — mastering Arduino, Raspberry Pi, Scratch, PictoBlox, and Python through hands-on labs.</p>
+              <div class="pillar-card__tags">
+                <span class="pillar-tag">Ages 7–18+</span>
+                <span class="pillar-tag">Arduino</span>
+                <span class="pillar-tag">Python</span>
+              </div>
+              <a href="#contact" class="pillar-card__cta">Explore Academy →</a>
+            </div>
+          </article>
+
+          <!-- Card 2 — R&D · CYAN -->
+          <article class="pillar-card pillar-card--cyan reveal" style="--delay:0.1s" aria-label="Robotics R&D">
+            <img src="assets/images/robot-field.jpg" alt="Robotics R&D" class="pillar-card__photo"/>
+            <div class="pillar-card__scrim"></div>
+            <div class="pillar-card__tint"></div>
+            <span class="pillar-card__num">02</span>
+            <div class="pillar-card__body">
+              <h3 class="pillar-card__title">Robotics R&amp;D</h3>
+              <p class="pillar-card__tagline">Engineering the Physical Future</p>
+              <p class="pillar-card__desc">Custom autonomous machinery and intelligent field robotics engineered to solve complex operational challenges at scale.</p>
+              <div class="pillar-card__tags">
+                <span class="pillar-tag">Autonomous</span>
+                <span class="pillar-tag">Sensors</span>
+                <span class="pillar-tag">Field Robotics</span>
+              </div>
+              <a href="#contact" class="pillar-card__cta">Discuss R&amp;D →</a>
+            </div>
+          </article>
+
+          <!-- Card 3 — Automation · AMBER -->
+          <article class="pillar-card pillar-card--amber reveal" style="--delay:0.2s" aria-label="Industrial Automation">
+            <img src="assets/images/svc-automation.jpg" alt="Industrial Automation" class="pillar-card__photo"/>
+            <div class="pillar-card__scrim"></div>
+            <div class="pillar-card__tint"></div>
+            <span class="pillar-card__num">03</span>
+            <div class="pillar-card__body">
+              <h3 class="pillar-card__title">Industrial Automation</h3>
+              <p class="pillar-card__tagline">Optimizing Workflows, Maximizing Safety</p>
+              <p class="pillar-card__desc">Smart systems that eliminate repetitive tasks, remove workplace risk, and slash maintenance overhead by up to 70%.</p>
+              <div class="pillar-card__tags">
+                <span class="pillar-tag">PLC</span>
+                <span class="pillar-tag">SCADA</span>
+                <span class="pillar-tag">Smart Systems</span>
+              </div>
+              <a href="#contact" class="pillar-card__cta">Automate Now →</a>
+            </div>
+          </article>
+
+          <!-- Card 4 — Software · EMERALD -->
+          <article class="pillar-card pillar-card--emerald reveal" style="--delay:0.3s" aria-label="Software & Mobile">
+            <img src="assets/images/svc-software.jpg" alt="Software & Mobile Apps" class="pillar-card__photo"/>
+            <div class="pillar-card__scrim"></div>
+            <div class="pillar-card__tint"></div>
+            <span class="pillar-card__num">04</span>
+            <div class="pillar-card__body">
+              <h3 class="pillar-card__title">Software &amp; Mobile Apps</h3>
+              <p class="pillar-card__tagline">Crafting Seamless Digital Experiences</p>
+              <p class="pillar-card__desc">High-performance web apps and custom mobile experiences built clean, fast, and to scale without compromise.</p>
+              <div class="pillar-card__tags">
+                <span class="pillar-tag">Web Apps</span>
+                <span class="pillar-tag">Mobile</span>
+                <span class="pillar-tag">API</span>
+              </div>
+              <a href="#contact" class="pillar-card__cta">Build With Us →</a>
+            </div>
+          </article>
+
+          <!-- Card 5 — Marketing · ROSE -->
+          <article class="pillar-card pillar-card--rose reveal" style="--delay:0.4s" aria-label="Digital Marketing">
+            <img src="assets/images/svc-marketing.jpg" alt="Digital Marketing & Growth" class="pillar-card__photo"/>
+            <div class="pillar-card__scrim"></div>
+            <div class="pillar-card__tint"></div>
+            <span class="pillar-card__num">05</span>
+            <div class="pillar-card__body">
+              <h3 class="pillar-card__title">Digital Marketing &amp; Growth</h3>
+              <p class="pillar-card__tagline">Data-Driven Client Acquisition</p>
+              <p class="pillar-card__desc">Automated funnels, high-intent SEO, and paid campaigns that turn traffic into predictable corporate revenue.</p>
+              <div class="pillar-card__tags">
+                <span class="pillar-tag">SEO</span>
+                <span class="pillar-tag">Paid Ads</span>
+                <span class="pillar-tag">Funnels</span>
+              </div>
+              <a href="#contact" class="pillar-card__cta">Grow Revenue →</a>
+            </div>
+          </article>
+
+        </div><!-- /services-grid -->
+
+        <!-- CTA -->
+        <div class="text-center mt-12 reveal" style="--delay:0.5s">
+          <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+            Discuss Your Project
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7H11M7 3L11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+    ============================================================ -->
+    <section id="process" class="py-24 lg:py-32" aria-labelledby="process-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+          <span class="section-label reveal">How We Work</span>
+          <h2 id="process-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
+            From Idea to <span class="gradient-text">Reality</span>
+          </h2>
+          <p class="reveal text-slate-400 max-w-xl mx-auto" style="--delay:0.2s">
+            A proven six-step framework that turns your vision into deployed, working technology.
+          </p>
+        </div>
+
+        <!-- Desktop Timeline -->
+        <div class="hidden lg:grid lg:grid-cols-6 gap-0 relative">
+          <!-- Connector line background -->
+          <div class="absolute top-7 left-[8.33%] right-[8.33%] h-px bg-gradient-to-r from-primary via-accent to-secondary opacity-30" aria-hidden="true"></div>
+
+          <div class="reveal process-step" style="--delay:0s">
+            <div class="step-number">1</div>
+            <h3 class="font-heading font-600 text-slate-100 text-sm mt-3 mb-1">Discovery</h3>
+            <p class="text-slate-500 text-xs leading-relaxed px-2">Deep-dive into your goals, constraints, and opportunities.</p>
+          </div>
+          <div class="reveal process-step" style="--delay:0.1s">
+            <div class="step-number">2</div>
+            <h3 class="font-heading font-600 text-slate-100 text-sm mt-3 mb-1">Planning</h3>
+            <p class="text-slate-500 text-xs leading-relaxed px-2">Architecture blueprints, timelines, and resource allocation.</p>
+          </div>
+          <div class="reveal process-step" style="--delay:0.2s">
+            <div class="step-number">3</div>
+            <h3 class="font-heading font-600 text-slate-100 text-sm mt-3 mb-1">Design</h3>
+            <p class="text-slate-500 text-xs leading-relaxed px-2">UI/UX, hardware schematics, system wireframes.</p>
+          </div>
+          <div class="reveal process-step" style="--delay:0.3s">
+            <div class="step-number">4</div>
+            <h3 class="font-heading font-600 text-slate-100 text-sm mt-3 mb-1">Development</h3>
+            <p class="text-slate-500 text-xs leading-relaxed px-2">Agile sprints — hardware builds, code, integration.</p>
+          </div>
+          <div class="reveal process-step" style="--delay:0.4s">
+            <div class="step-number">5</div>
+            <h3 class="font-heading font-600 text-slate-100 text-sm mt-3 mb-1">Deployment</h3>
+            <p class="text-slate-500 text-xs leading-relaxed px-2">QA, testing, launch, and performance monitoring.</p>
+          </div>
+          <div class="reveal process-step" style="--delay:0.5s">
+            <div class="step-number">6</div>
+            <h3 class="font-heading font-600 text-slate-100 text-sm mt-3 mb-1">Support</h3>
+            <p class="text-slate-500 text-xs leading-relaxed px-2">Ongoing optimization, updates, and scale-up partnerships.</p>
+          </div>
+        </div>
+
+        <!-- Mobile Timeline (vertical) -->
+        <div class="lg:hidden space-y-0">
+          <div class="reveal flex gap-5 pb-8 relative" style="--delay:0s">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="step-number w-11 h-11 text-sm">1</div>
+              <div class="w-px flex-1 bg-gradient-to-b from-primary to-transparent mt-2 min-h-[2rem]" aria-hidden="true"></div>
+            </div>
+            <div class="pb-2">
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Discovery</h3>
+              <p class="text-slate-500 text-sm">Deep-dive into your goals, constraints, and opportunities.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5 pb-8" style="--delay:0.1s">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="step-number w-11 h-11 text-sm">2</div>
+              <div class="w-px flex-1 bg-gradient-to-b from-primary/60 to-transparent mt-2 min-h-[2rem]" aria-hidden="true"></div>
+            </div>
+            <div>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Planning</h3>
+              <p class="text-slate-500 text-sm">Architecture blueprints, timelines, and resource allocation.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5 pb-8" style="--delay:0.2s">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="step-number w-11 h-11 text-sm">3</div>
+              <div class="w-px flex-1 bg-gradient-to-b from-accent/60 to-transparent mt-2 min-h-[2rem]" aria-hidden="true"></div>
+            </div>
+            <div>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Design</h3>
+              <p class="text-slate-500 text-sm">UI/UX, hardware schematics, system wireframes.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5 pb-8" style="--delay:0.3s">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="step-number w-11 h-11 text-sm">4</div>
+              <div class="w-px flex-1 bg-gradient-to-b from-accent/40 to-transparent mt-2 min-h-[2rem]" aria-hidden="true"></div>
+            </div>
+            <div>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Development</h3>
+              <p class="text-slate-500 text-sm">Agile sprints — hardware builds, code, integration.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5 pb-8" style="--delay:0.4s">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="step-number w-11 h-11 text-sm">5</div>
+              <div class="w-px flex-1 bg-gradient-to-b from-secondary/40 to-transparent mt-2 min-h-[2rem]" aria-hidden="true"></div>
+            </div>
+            <div>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Deployment</h3>
+              <p class="text-slate-500 text-sm">QA, testing, launch, and performance monitoring.</p>
+            </div>
+          </div>
+          <div class="reveal flex gap-5" style="--delay:0.5s">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div class="step-number w-11 h-11 text-sm">6</div>
+            </div>
+            <div>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Support</h3>
+              <p class="text-slate-500 text-sm">Ongoing optimization, updates, and scale-up partnerships.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PORTFOLIO
+    ============================================================ -->
+    <section id="why-us" class="py-24 lg:py-32" aria-labelledby="why-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+          <span class="section-label reveal">Why Deepseed</span>
+          <h2 id="why-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
+            The Unfair <span class="gradient-text-purple">Advantage</span>
+          </h2>
+          <p class="reveal text-slate-400 max-w-2xl mx-auto" style="--delay:0.2s">
+            Three pillars that make Deepseed Technologies the definitive choice.
+          </p>
+        </div>
+
+        <!-- Main 3 Benefits -->
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+          <div class="reveal glass-card p-8 text-center" style="--delay:0s">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/20 flex items-center justify-center mx-auto mb-5">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <path d="M14 4l9 5v10l-9 5-9-5V9l9-5z" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M10 13.5l2.5 2.5 5.5-5.5" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-600 text-slate-100 text-xl mb-3">Complete Risk Elimination</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We deploy field robotics to take over dangerous, high-risk physical tasks, ensuring 100% workplace safety compliance.
+            </p>
+          </div>
+
+          <div class="reveal glass-card p-8 text-center border-primary/30" style="--delay:0.1s">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/10 border border-primary/20 flex items-center justify-center mx-auto mb-5">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <path d="M6 20L10 14l5 3 4-7 3 4" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 24h20" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-600 text-slate-100 text-xl mb-3">Up to 70% Cost Reduction</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Custom automation eliminates human error, minimizes material waste, and optimizes long-term operational efficiency.
+            </p>
+          </div>
+
+          <div class="reveal glass-card p-8 text-center" style="--delay:0.2s">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center mx-auto mb-5">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="9" stroke="#60A5FA" stroke-width="1.5"/>
+                <circle cx="14" cy="14" r="4" stroke="#60A5FA" stroke-width="1.5"/>
+                <path d="M14 5V9M14 19V23M5 14H9M19 14H23" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-600 text-slate-100 text-xl mb-3">Unified Technical Ecosystem</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We are your single, end-to-end partner. We build the hardware, write the software, and engineer the marketing system to scale it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature Checklist -->
+        <div class="reveal glass-card p-8">
+          <h3 class="font-heading font-600 text-slate-100 text-xl mb-6 text-center">Everything You Need. Nothing You Don't.</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#3B82F6" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#3B82F6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Custom Hardware Design
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#3B82F6" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#3B82F6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              High-Performance Software
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#3B82F6" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#3B82F6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Automated Lead Funnels
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60A5FA" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#60A5FA" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Youth Robotics Curriculum
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60A5FA" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#60A5FA" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Enterprise Workflow Automation
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#60A5FA" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#60A5FA" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full-Stack Mobile Applications
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#93C5FD" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Paid Ad Management &amp; SEO
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#93C5FD" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Industrial IoT Integration
+            </div>
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#93C5FD" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              End-to-End Project Support
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CLIENT SEGMENTS
+    ============================================================ -->
+    <section id="solutions" class="py-24 lg:py-32" aria-labelledby="solutions-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+          <span class="section-label reveal">Who We Serve</span>
+          <h2 id="solutions-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
+            Built for <span class="gradient-text">Every Sector</span>
+          </h2>
+        </div>
+
+        <div class="seg-grid">
+
+          <!-- Education & Parents -->
+          <article class="seg-card reveal" style="--delay:0s; --sc:#8B5CF6">
+            <div class="seg-card__img">
+              <img src="assets/images/svc-academy.jpg" alt="Education & Parents" loading="lazy"/>
+              <div class="seg-card__img-scrim"></div>
+            </div>
+            <div class="seg-card__body">
+              <span class="seg-card__tag">Education &amp; Parents</span>
+              <h3 class="seg-card__title">Developing Future-Proof Skills</h3>
+              <p class="seg-card__desc">Prepare your students for an AI and automation-driven global economy. Our structured robotics and coding programs build deep critical thinking, logical reasoning, and competitive engineering habits early in life.</p>
+              <ul class="seg-card__list">
+                <li>Curriculum for ages 7–18+</li>
+                <li>Arduino, Python &amp; Robotics labs</li>
+                <li>School &amp; workshop partnerships</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Developers & PMs -->
+          <article class="seg-card seg-card--flip reveal" style="--delay:0.1s; --sc:#06B6D4">
+            <div class="seg-card__img">
+              <img src="assets/images/svc-software.jpg" alt="Developers & PMs" loading="lazy"/>
+              <div class="seg-card__img-scrim"></div>
+            </div>
+            <div class="seg-card__body">
+              <span class="seg-card__tag">Developers &amp; PMs</span>
+              <h3 class="seg-card__title">Scalable Infrastructure, Zero Headaches</h3>
+              <p class="seg-card__desc">Get high-performance digital products engineered without the headaches. Clean codebase, lightning-fast deployment, and smooth integrations that adapt perfectly to your existing workflows.</p>
+              <ul class="seg-card__list">
+                <li>Full-stack web &amp; mobile apps</li>
+                <li>REST API &amp; third-party integrations</li>
+                <li>CI/CD &amp; cloud deployment</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Enterprise Leaders -->
+          <article class="seg-card reveal" style="--delay:0.2s; --sc:#F59E0B">
+            <div class="seg-card__img">
+              <img src="assets/images/svc-automation.jpg" alt="Enterprise Leaders" loading="lazy"/>
+              <div class="seg-card__img-scrim"></div>
+            </div>
+            <div class="seg-card__body">
+              <span class="seg-card__tag">Enterprise Leaders</span>
+              <h3 class="seg-card__title">Predictable, Automated Growth</h3>
+              <p class="seg-card__desc">Stop letting manual bottlenecks dictate your profit margins. From hardware-driven industrial automation to software-driven client acquisition funnels, we streamline your entire operations grid.</p>
+              <ul class="seg-card__list">
+                <li>PLC / SCADA &amp; smart systems</li>
+                <li>Up to 70% cost reduction</li>
+                <li>100% safety compliance</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+    ============================================================ -->
+    <section id="portfolio" class="py-24 lg:py-32" aria-labelledby="portfolio-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-10">
+          <span class="section-label reveal">Our Work</span>
+          <h2 id="portfolio-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+          <p class="reveal text-slate-400 max-w-xl mx-auto mb-8" style="--delay:0.2s">
+            A selection of work across robotics, software, automation, and digital growth.
+          </p>
+
+          <!-- Filter Buttons -->
+          <div class="reveal flex flex-wrap justify-center gap-3" style="--delay:0.3s" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="robotics">Robotics</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="marketing">Marketing</button>
+          </div>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <article class="reveal portfolio-card" data-category="robotics" style="--delay:0s" aria-label="Autonomous Field Robot project">
+            <div class="portfolio-image">
+              <img src="assets/images/svc-rd.jpg" alt="Autonomous Field Robot" class="w-full h-full object-cover" loading="lazy"/>
+              <div class="portfolio-overlay">
+                <span class="tag-pill bg-secondary/20 text-secondary border border-secondary/30 mb-2">Robotics</span>
+                <p class="text-white font-heading font-600 text-center px-4">Autonomous Field Robot</p>
+              </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+              <span class="tag-pill bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs mb-2 inline-block">Robotics</span>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Autonomous Field Robot</h3>
+              <p class="text-slate-500 text-sm">Industrial-grade autonomous navigation system with obstacle detection.</p>
+            </div>
+          </article>
+
+          <article class="reveal portfolio-card" data-category="software" style="--delay:0.1s" aria-label="Enterprise SaaS Platform project">
+            <div class="portfolio-image">
+              <img src="assets/images/svc-code.jpg" alt="Enterprise SaaS Platform" class="w-full h-full object-cover" loading="lazy"/>
+              <div class="portfolio-overlay">
+                <span class="tag-pill bg-accent/20 text-accent border border-accent/30 mb-2">Software</span>
+                <p class="text-white font-heading font-600 text-center px-4">Enterprise SaaS Platform</p>
+              </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+              <span class="tag-pill bg-blue-400/10 text-blue-300 border border-blue-400/20 text-xs mb-2 inline-block">Software</span>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Enterprise SaaS Platform</h3>
+              <p class="text-slate-500 text-sm">Scalable multi-tenant web application with real-time dashboards.</p>
+            </div>
+          </article>
+
+          <article class="reveal portfolio-card" data-category="automation" style="--delay:0.2s" aria-label="Smart Factory Automation project">
+            <div class="portfolio-image">
+              <img src="assets/images/svc-factory.jpg" alt="Smart Factory System" class="w-full h-full object-cover" loading="lazy"/>
+              <div class="portfolio-overlay">
+                <span class="tag-pill bg-secondary/20 text-secondary border border-secondary/30 mb-2">Automation</span>
+                <p class="text-white font-heading font-600 text-center px-4">Smart Factory System</p>
+              </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+              <span class="tag-pill bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs mb-2 inline-block">Automation</span>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Smart Factory System</h3>
+              <p class="text-slate-500 text-sm">IoT-driven production line with predictive maintenance alerts.</p>
+            </div>
+          </article>
+
+          <article class="reveal portfolio-card" data-category="marketing" style="--delay:0.3s" aria-label="Lead Generation Funnel project">
+            <div class="portfolio-image">
+              <img src="assets/images/svc-mktdash.jpg" alt="Lead Generation Funnel" class="w-full h-full object-cover" loading="lazy"/>
+              <div class="portfolio-overlay">
+                <span class="tag-pill bg-primary/20 text-primary border border-primary/30 mb-2">Marketing</span>
+                <p class="text-white font-heading font-600 text-center px-4">Lead Generation Funnel</p>
+              </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+              <span class="tag-pill bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs mb-2 inline-block">Marketing</span>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Lead Generation Funnel</h3>
+              <p class="text-slate-500 text-sm">Automated multi-channel funnel achieving 340% ROAS improvement.</p>
+            </div>
+          </article>
+
+          <article class="reveal portfolio-card" data-category="robotics" style="--delay:0.4s" aria-label="Robotics Academy Platform project">
+            <div class="portfolio-image">
+              <img src="assets/images/svc-labwork.jpg" alt="Academy Learning Platform" class="w-full h-full object-cover" loading="lazy"/>
+              <div class="portfolio-overlay">
+                <span class="tag-pill bg-accent/20 text-accent border border-accent/30 mb-2">Robotics</span>
+                <p class="text-white font-heading font-600 text-center px-4">Academy Learning Platform</p>
+              </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+              <span class="tag-pill bg-blue-400/10 text-blue-300 border border-blue-400/20 text-xs mb-2 inline-block">Robotics</span>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Academy Learning Platform</h3>
+              <p class="text-slate-500 text-sm">Curriculum management system serving 500+ students across 3 cities.</p>
+            </div>
+          </article>
+
+          <article class="reveal portfolio-card" data-category="software" style="--delay:0.5s" aria-label="Mobile Control App project">
+            <div class="portfolio-image">
+              <img src="assets/images/svc-assembly.jpg" alt="Mobile Control App" class="w-full h-full object-cover" loading="lazy"/>
+              <div class="portfolio-overlay">
+                <span class="tag-pill bg-secondary/20 text-secondary border border-secondary/30 mb-2">Software</span>
+                <p class="text-white font-heading font-600 text-center px-4">Mobile Control App</p>
+              </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+              <span class="tag-pill bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs mb-2 inline-block">Software</span>
+              <h3 class="font-heading font-600 text-slate-100 mb-1">Mobile Control App</h3>
+              <p class="text-slate-500 text-sm">Cross-platform app to control and monitor industrial automation systems.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+    ============================================================ -->
+    <section id="testimonials" class="py-24 lg:py-32" aria-labelledby="testimonials-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-14">
+          <span class="section-label reveal">Social Proof</span>
+          <h2 id="testimonials-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
+            Trusted by <span class="gradient-text">Innovators</span>
+          </h2>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative max-w-3xl mx-auto" role="region" aria-label="Client testimonials">
+          <div class="overflow-hidden rounded-2xl">
+            <div id="testimonial-track" class="testimonial-track" role="list">
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-inner">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="avatar-circle bg-gradient-to-br from-primary to-accent" aria-hidden="true">RK</div>
+                    <div>
+                      <p class="font-heading font-600 text-slate-100">Rahul Krishnamurthy</p>
+                      <p class="text-slate-500 text-sm">Operations Director, ManufacturePro</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                    </div>
+                  </div>
+                  <blockquote class="text-slate-400 leading-relaxed italic">
+                    "Deepseed completely transformed our production line. What used to take 8 operators now runs autonomously with zero downtime. The ROI was visible within the first quarter."
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-inner">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="avatar-circle bg-gradient-to-br from-accent to-secondary" aria-hidden="true">PS</div>
+                    <div>
+                      <p class="font-heading font-600 text-slate-100">Priya Sundaram</p>
+                      <p class="text-slate-500 text-sm">Principal, Innovate Academy</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                    </div>
+                  </div>
+                  <blockquote class="text-slate-400 leading-relaxed italic">
+                    "The robotics training program is extraordinary. Students who had never touched a microcontroller were building functional bots by week three. Parent feedback has been overwhelmingly positive."
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-inner">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="avatar-circle bg-gradient-to-br from-secondary to-primary" aria-hidden="true">AV</div>
+                    <div>
+                      <p class="font-heading font-600 text-slate-100">Arvind Venkatesh</p>
+                      <p class="text-slate-500 text-sm">Founder &amp; CEO, ScaleUp Ventures</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                    </div>
+                  </div>
+                  <blockquote class="text-slate-400 leading-relaxed italic">
+                    "The digital marketing funnel Deepseed built for us generates 3x more qualified leads than everything we were doing before — at half the ad spend. Genuinely impressive engineering."
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="testimonial-card" role="listitem">
+                <div class="testimonial-inner">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="avatar-circle bg-gradient-to-br from-primary/80 to-secondary" aria-hidden="true">MN</div>
+                    <div>
+                      <p class="font-heading font-600 text-slate-100">Meera Nair</p>
+                      <p class="text-slate-500 text-sm">CTO, Nexus Systems</p>
+                    </div>
+                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
+                    </div>
+                  </div>
+                  <blockquote class="text-slate-400 leading-relaxed italic">
+                    "Clean code, clear documentation, on-time delivery. Deepseed's software team is the most professional vendor we've worked with. The mobile app they built for us scaled from day one."
+                  </blockquote>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="flex items-center justify-center gap-4 mt-8">
+            <button id="testimonial-prev" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all" aria-label="Previous testimonial">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="flex gap-2" role="group" aria-label="Testimonial pagination">
+              <button class="dot-indicator active" aria-label="Testimonial 1" data-index="0"></button>
+              <button class="dot-indicator" aria-label="Testimonial 2" data-index="1"></button>
+              <button class="dot-indicator" aria-label="Testimonial 3" data-index="2"></button>
+              <button class="dot-indicator" aria-label="Testimonial 4" data-index="3"></button>
+            </div>
+
+            <button id="testimonial-next" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all" aria-label="Next testimonial">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+    ============================================================ -->
+    <section id="faq" class="py-24 lg:py-32" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-14">
+          <span class="section-label reveal">Questions</span>
+          <h2 id="faq-heading" class="reveal section-title text-3xl sm:text-4xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
+            Frequently <span class="gradient-text">Asked</span>
+          </h2>
+        </div>
+
+        <div class="space-y-3 reveal">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What industries does Deepseed Technologies serve?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">We serve manufacturing, education, healthcare, logistics, retail, and technology sectors. Our five-pillar model means we can provide hardware automation, software solutions, and growth marketing to virtually any industry undergoing digital transformation.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What age groups does the Robotics Training Academy cater to?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Our structured programs cover students from ages 7 all the way to 18+ and adult learners. Curriculum is tiered — foundational Scratch &amp; PictoBlox for younger students, progressing to Arduino, Raspberry Pi, and Python for advanced learners.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does a typical industrial automation project take?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Project timelines vary by scope. A focused single-process automation typically takes 4–8 weeks from discovery to deployment. Complex multi-line integrations may span 3–6 months. We provide a detailed timeline after the initial system viability assessment.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer post-deployment support and maintenance?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes, all projects include a defined support and handover phase. We offer ongoing maintenance retainers, performance monitoring, and scale-up partnerships so that your system continues to improve over time.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can Deepseed build both the hardware and the software for a project?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Absolutely — this is one of our core differentiators. When a client partners with us to build an automated system, they get the custom hardware, the mobile app to control it, the website to market it, and the data-driven ad strategy to monetize it. One partner, full stack.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the cost of the free system viability assessment?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">The initial system viability assessment is completely complimentary. Submit your details via the contact form and our engineering team will schedule a discovery call to understand your goals and provide a preliminary feasibility overview — at no charge.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you work with startups as well as established enterprises?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes. We work with early-stage startups needing an MVP, scaling companies needing custom infrastructure, and large enterprises needing full automation overhauls. Our engagement model adapts to your stage and budget.</div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do I get started with the Digital Marketing &amp; Growth System?</span>
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Start with a consultation request via our contact form — select "Digital Marketing &amp; Funnel Setup" from the dropdown. Our growth team will audit your existing digital presence, identify high-impact opportunities, and propose a tailored funnel strategy.</div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section id="contact" class="py-24 lg:py-32" aria-labelledby="contact-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-14">
+          <span class="section-label reveal">Get In Touch</span>
+          <h2 id="contact-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-3" style="--delay:0.1s">
+            Ready to Engineer Your<br/>
+            <span class="gradient-text">Next Breakthrough?</span>
+          </h2>
+          <p class="reveal text-slate-400 max-w-xl mx-auto" style="--delay:0.2s">
+            Get in touch with our engineering and growth teams for a complimentary system viability assessment.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+
+          <!-- Left: Contact Info -->
+          <div class="reveal space-y-6">
+            <div class="glass-card p-6">
+              <h3 class="font-heading font-600 text-slate-100 mb-5">Contact Details</h3>
+
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4a1 1 0 011-1h10a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="#3B82F6" stroke-width="1.2"/><path d="M2 4l6 5 6-5" stroke="#3B82F6" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-500 text-xs mb-0.5">Email</p>
+                    <a href="mailto:hello@deepseedtech.in" class="text-slate-400 text-sm hover:text-primary transition-colors">hello@deepseedtech.in</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 2a1 1 0 011-1h2l1 3-1.5 1.5a10 10 0 004 4L11 8l3 1v2a1 1 0 01-1 1A11 11 0 013 3z" stroke="#93C5FD" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-500 text-xs mb-0.5">Phone</p>
+                    <a href="tel:+919876543210" class="text-slate-300 text-sm hover:text-secondary transition-colors">+91 98765 43210</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2a5 5 0 015 5c0 4-5 8-5 8S3 11 3 7a5 5 0 015-5z" stroke="#60A5FA" stroke-width="1.2"/><circle cx="8" cy="7" r="1.5" stroke="#60A5FA" stroke-width="1.2"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-slate-500 text-xs mb-0.5">Location</p>
+                    <p class="text-slate-300 text-sm">Chennai, Tamil Nadu, India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="glass-card p-6">
+              <h3 class="font-heading font-600 text-slate-100 mb-4">Follow Us</h3>
+              <div class="flex gap-3">
+                <a href="#" class="social-icon" aria-label="Deepseed Technologies on LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Deepseed Technologies on Twitter/X">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Deepseed Technologies on Instagram">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Deepseed Technologies on YouTube">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FFFFFF"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="reveal" style="--delay:0.15s">
+            <div class="glass-card p-8">
+              <form id="contact-form" novalidate aria-label="Contact request form">
+                <div class="grid sm:grid-cols-2 gap-5 mb-5">
+                  <div class="form-group">
+                    <label class="form-label" for="field-name">Full Name <span aria-hidden="true" class="text-red-400">*</span></label>
+                    <input type="text" id="field-name" class="form-input" placeholder="Your full name" autocomplete="name" required aria-required="true" aria-describedby="err-name"/>
+                    <p class="form-error" id="err-name" role="alert" aria-live="polite"></p>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="field-email">Business Email <span aria-hidden="true" class="text-red-400">*</span></label>
+                    <input type="email" id="field-email" class="form-input" placeholder="you@company.com" autocomplete="email" required aria-required="true" aria-describedby="err-email"/>
+                    <p class="form-error" id="err-email" role="alert" aria-live="polite"></p>
+                  </div>
+                </div>
+
+                <div class="form-group mb-5">
+                  <label class="form-label" for="field-service">Primary Area of Interest <span aria-hidden="true" class="text-red-400">*</span></label>
+                  <select id="field-service" class="form-input" required aria-required="true" aria-describedby="err-service" style="background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; appearance: none; -webkit-appearance: none; padding-right: 2.5rem;">
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="academy">Robotics Skills Training Academy</option>
+                    <option value="rd">Robotics R&amp;D / Prototyping</option>
+                    <option value="automation">Industrial Automation Systems</option>
+                    <option value="software">Software (Web/Mobile) Development</option>
+                    <option value="marketing">Digital Marketing &amp; Funnel Setup</option>
+                  </select>
+                  <p class="form-error" id="err-service" role="alert" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group mb-6">
+                  <label class="form-label" for="field-message">Describe Your Project Goals <span aria-hidden="true" class="text-red-400">*</span></label>
+                  <textarea id="field-message" class="form-input resize-none" rows="4" placeholder="Briefly describe what you're looking to build or solve..." required aria-required="true" aria-describedby="err-message"></textarea>
+                  <p class="form-error" id="err-message" role="alert" aria-live="polite"></p>
+                </div>
+
+                <button type="submit" class="btn-primary w-full justify-center py-3.5 text-base">
+                  Submit Request for Free Assessment
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </form>
+
+              <!-- Success State -->
+              <div id="form-success" class="hidden text-center py-8" role="status" aria-live="polite">
+                <div class="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center mx-auto mb-4">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M6 14l5 5 11-11" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3 class="font-heading font-600 text-slate-100 text-xl mb-2">Request Submitted!</h3>
+                <p class="text-slate-400 text-sm">Our engineering team will review your project details and reach out within 24 hours for your complimentary system viability assessment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="border-t border-slate-800 pt-16 pb-8" aria-label="Site footer">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+        <!-- Brand -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-2.5 mb-4">
+            <img src="assets/images/logo-icon.png" alt="Deepseed Technologies" class="footer-logo h-24 w-24 object-contain"/>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-5">
+            Sowing Innovation. Engineering Reality.<br/>
+            An integrated technology ecosystem spanning robotics, software, automation, and digital growth.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FFFFFF"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-heading font-600 text-slate-100 text-sm mb-5 uppercase tracking-widest text-xs">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#home"        class="footer-link hover:text-slate-100 transition-colors">Home</a></li>
+            <li><a href="#about"       class="footer-link hover:text-slate-100 transition-colors">About Us</a></li>
+            <li><a href="#why-us"      class="footer-link hover:text-slate-100 transition-colors">Why Choose Us</a></li>
+            <li><a href="#portfolio"   class="footer-link hover:text-slate-100 transition-colors">Portfolio</a></li>
+            <li><a href="#process"     class="footer-link hover:text-slate-100 transition-colors">Our Process</a></li>
+            <li><a href="#faq"         class="footer-link hover:text-slate-100 transition-colors">FAQ</a></li>
+            <li><a href="#contact"     class="footer-link hover:text-slate-100 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="font-heading font-600 text-slate-100 text-xs mb-5 uppercase tracking-widest">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#services" class="footer-link hover:text-slate-100 transition-colors">Robotics Training Academy</a></li>
+            <li><a href="#services" class="footer-link hover:text-slate-100 transition-colors">Robotics R&amp;D</a></li>
+            <li><a href="#services" class="footer-link hover:text-slate-100 transition-colors">Industrial Automation</a></li>
+            <li><a href="#services" class="footer-link hover:text-slate-100 transition-colors">Software Development</a></li>
+            <li><a href="#services" class="footer-link hover:text-slate-100 transition-colors">Digital Marketing</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="font-heading font-600 text-slate-100 text-xs mb-2 uppercase tracking-widest">Stay Updated</h3>
+          <p class="text-slate-500 text-sm mb-4">Get the latest in robotics, automation, and digital growth.</p>
+          <form id="newsletter-form" novalidate aria-label="Newsletter subscription">
+            <div class="flex gap-2">
+              <input type="email" class="newsletter-input" placeholder="you@email.com" aria-label="Email address for newsletter" autocomplete="email" required/>
+              <button type="submit" class="btn-primary py-2.5 px-4 flex-shrink-0 text-sm">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="sr-only">Subscribe</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400 text-sm">
+          &copy; <span id="copyright-year">2024</span> Deepseed Technologies LLP. All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-slate-400 text-sm hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="text-slate-400 text-sm hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="#contact" class="text-slate-400 text-sm hover:text-slate-400 transition-colors">Contact Support</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Dynamic copyright year -->
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Hero Particle Animation -->
+  <script>
+  (function () {
+    const canvas  = document.getElementById('hero-particles');
+    if (!canvas) return;
+    const ctx     = canvas.getContext('2d');
+    let W, H, particles = [], raf;
+
+    const COUNT   = 80;
+    const MAX_D   = 140;  // max connection distance
+    const SPEED   = 0.45;
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function accentColor() {
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue('--dp-accent').trim() || '#3B82F6';
+    }
+
+    function hexToRgb(hex) {
+      hex = hex.replace('#', '');
+      if (hex.length === 3) hex = hex.split('').map(c => c+c).join('');
+      const n = parseInt(hex, 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+
+    function mkParticle() {
+      return {
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * SPEED,
+        vy: (Math.random() - 0.5) * SPEED,
+        r:  Math.random() * 1.8 + 0.6,
+      };
+    }
+
+    function init() {
+      particles = Array.from({ length: COUNT }, mkParticle);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      const isLight = document.documentElement.classList.contains('light');
+      const accent  = isLight
+        ? (getComputedStyle(document.documentElement).getPropertyValue('--lp-accent').trim() || '#2563EB')
+        : accentColor();
+
+      let [r, g, b] = hexToRgb(accent);
+
+      // Move
+      for (const p of particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > W) p.vx *= -1;
+        if (p.y < 0 || p.y > H) p.vy *= -1;
+      }
+
+      // Connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const d  = Math.sqrt(dx * dx + dy * dy);
+          if (d < MAX_D) {
+            const alpha = (1 - d / MAX_D) * (isLight ? 0.12 : 0.18);
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
+            ctx.lineWidth   = 0.8;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Dots
+      for (const p of particles) {
+        const alpha = isLight ? 0.35 : 0.55;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
+        ctx.fill();
+      }
+
+      raf = requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => { resize(); init(); });
+    resize();
+    init();
+    draw();
+  })();
+  </script>
+
+</body>
+</html>
