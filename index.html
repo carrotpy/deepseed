@@ -76,12 +76,6 @@
     }
   </script>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    // Replace YOUR_PUBLIC_KEY with your EmailJS public key
-    (function(){ emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' }); })();
-  </script>
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -95,142 +89,142 @@
   <!-- ============================================================
        PALETTE PICKER (always visible — dark + light sections)
   ============================================================ -->
-  <div id="palette-picker" aria-label="Choose colour palette" role="complementary">
-    <button id="palette-toggle" aria-label="Open palette picker">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
-        <circle cx="7.5" cy="10" r="2" fill="#3B82F6"/>
-        <circle cx="16.5" cy="10" r="2" fill="#8B5CF6"/>
-        <circle cx="12" cy="17" r="2" fill="#10B981"/>
-      </svg>
-      <span>Palette</span>
-    </button>
+<!--  <div id="palette-picker" aria-label="Choose colour palette" role="complementary">-->
+<!--    <button id="palette-toggle" aria-label="Open palette picker">-->
+<!--      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">-->
+<!--        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>-->
+<!--        <circle cx="7.5" cy="10" r="2" fill="#3B82F6"/>-->
+<!--        <circle cx="16.5" cy="10" r="2" fill="#8B5CF6"/>-->
+<!--        <circle cx="12" cy="17" r="2" fill="#10B981"/>-->
+<!--      </svg>-->
+<!--      <span>Palette</span>-->
+<!--    </button>-->
 
-    <div id="palette-panel">
+<!--    <div id="palette-panel">-->
 
-      <!-- ── DARK THEME SWATCHES ── -->
-      <p class="pp-label pp-label--dark">Dark Theme</p>
-      <div class="pp-swatches-dark">
+<!--      &lt;!&ndash; ── DARK THEME SWATCHES ── &ndash;&gt;-->
+<!--      <p class="pp-label pp-label&#45;&#45;dark">Dark Theme</p>-->
+<!--      <div class="pp-swatches-dark">-->
 
-        <button class="pp-swatch pp-dark-swatch pp-swatch--active-dark" data-dpalette="default" title="Midnight Blue">
-          <span class="pp-swatch__colors">
-            <span style="background:#080C18"></span>
-            <span style="background:#3B82F6"></span>
-            <span style="background:#93C5FD"></span>
-          </span>
-          <span class="pp-swatch__name">Midnight</span>
-        </button>
+<!--        <button class="pp-swatch pp-dark-swatch pp-swatch&#45;&#45;active-dark" data-dpalette="default" title="Midnight Blue">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#080C18"></span>-->
+<!--            <span style="background:#3B82F6"></span>-->
+<!--            <span style="background:#93C5FD"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Midnight</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-dark-swatch" data-dpalette="purple" title="Cosmic Purple">
-          <span class="pp-swatch__colors">
-            <span style="background:#0D0B1A"></span>
-            <span style="background:#8B5CF6"></span>
-            <span style="background:#C4B5FD"></span>
-          </span>
-          <span class="pp-swatch__name">Cosmic</span>
-        </button>
+<!--        <button class="pp-swatch pp-dark-swatch" data-dpalette="purple" title="Cosmic Purple">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#0D0B1A"></span>-->
+<!--            <span style="background:#8B5CF6"></span>-->
+<!--            <span style="background:#C4B5FD"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Cosmic</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-dark-swatch" data-dpalette="teal" title="Deep Teal">
-          <span class="pp-swatch__colors">
-            <span style="background:#031017"></span>
-            <span style="background:#06B6D4"></span>
-            <span style="background:#67E8F9"></span>
-          </span>
-          <span class="pp-swatch__name">Deep Teal</span>
-        </button>
+<!--        <button class="pp-swatch pp-dark-swatch" data-dpalette="teal" title="Deep Teal">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#031017"></span>-->
+<!--            <span style="background:#06B6D4"></span>-->
+<!--            <span style="background:#67E8F9"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Deep Teal</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-dark-swatch" data-dpalette="forest" title="Forest Night">
-          <span class="pp-swatch__colors">
-            <span style="background:#030F09"></span>
-            <span style="background:#10B981"></span>
-            <span style="background:#6EE7B7"></span>
-          </span>
-          <span class="pp-swatch__name">Forest</span>
-        </button>
+<!--        <button class="pp-swatch pp-dark-swatch" data-dpalette="forest" title="Forest Night">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#030F09"></span>-->
+<!--            <span style="background:#10B981"></span>-->
+<!--            <span style="background:#6EE7B7"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Forest</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-dark-swatch" data-dpalette="crimson" title="Crimson Night">
-          <span class="pp-swatch__colors">
-            <span style="background:#150508"></span>
-            <span style="background:#F43F5E"></span>
-            <span style="background:#FDA4AF"></span>
-          </span>
-          <span class="pp-swatch__name">Crimson</span>
-        </button>
+<!--        <button class="pp-swatch pp-dark-swatch" data-dpalette="crimson" title="Crimson Night">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#150508"></span>-->
+<!--            <span style="background:#F43F5E"></span>-->
+<!--            <span style="background:#FDA4AF"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Crimson</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-dark-swatch" data-dpalette="amber" title="Amber Dark">
-          <span class="pp-swatch__colors">
-            <span style="background:#130E02"></span>
-            <span style="background:#F59E0B"></span>
-            <span style="background:#FDE68A"></span>
-          </span>
-          <span class="pp-swatch__name">Amber</span>
-        </button>
+<!--        <button class="pp-swatch pp-dark-swatch" data-dpalette="amber" title="Amber Dark">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#130E02"></span>-->
+<!--            <span style="background:#F59E0B"></span>-->
+<!--            <span style="background:#FDE68A"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Amber</span>-->
+<!--        </button>-->
 
-      </div>
+<!--      </div>-->
 
-      <div class="pp-section-divider"></div>
+<!--      <div class="pp-section-divider"></div>-->
 
-      <!-- ── LIGHT THEME SWATCHES ── -->
-      <p class="pp-label pp-label--light">Light Theme</p>
-      <div class="pp-swatches-light">
+<!--      &lt;!&ndash; ── LIGHT THEME SWATCHES ── &ndash;&gt;-->
+<!--      <p class="pp-label pp-label&#45;&#45;light">Light Theme</p>-->
+<!--      <div class="pp-swatches-light">-->
 
-        <button class="pp-swatch pp-light-swatch pp-swatch--active-light" data-lpalette="default" title="Clean Professional">
-          <span class="pp-swatch__colors">
-            <span style="background:#F8FAFC"></span>
-            <span style="background:#2563EB"></span>
-            <span style="background:#0F172A"></span>
-          </span>
-          <span class="pp-swatch__name">Professional</span>
-        </button>
+<!--        <button class="pp-swatch pp-light-swatch pp-swatch&#45;&#45;active-light" data-lpalette="default" title="Clean Professional">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#F8FAFC"></span>-->
+<!--            <span style="background:#2563EB"></span>-->
+<!--            <span style="background:#0F172A"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Professional</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-light-swatch" data-lpalette="ocean" title="Ocean Blue">
-          <span class="pp-swatch__colors">
-            <span style="background:#F0F9FF"></span>
-            <span style="background:#0284C7"></span>
-            <span style="background:#0C1A2E"></span>
-          </span>
-          <span class="pp-swatch__name">Ocean</span>
-        </button>
+<!--        <button class="pp-swatch pp-light-swatch" data-lpalette="ocean" title="Ocean Blue">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#F0F9FF"></span>-->
+<!--            <span style="background:#0284C7"></span>-->
+<!--            <span style="background:#0C1A2E"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Ocean</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-light-swatch" data-lpalette="violet" title="Deep Violet">
-          <span class="pp-swatch__colors">
-            <span style="background:#F5F3FF"></span>
-            <span style="background:#7C3AED"></span>
-            <span style="background:#1E1B4B"></span>
-          </span>
-          <span class="pp-swatch__name">Violet</span>
-        </button>
+<!--        <button class="pp-swatch pp-light-swatch" data-lpalette="violet" title="Deep Violet">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#F5F3FF"></span>-->
+<!--            <span style="background:#7C3AED"></span>-->
+<!--            <span style="background:#1E1B4B"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Violet</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-light-swatch" data-lpalette="emerald" title="Forest Emerald">
-          <span class="pp-swatch__colors">
-            <span style="background:#F0FDF4"></span>
-            <span style="background:#059669"></span>
-            <span style="background:#052E16"></span>
-          </span>
-          <span class="pp-swatch__name">Emerald</span>
-        </button>
+<!--        <button class="pp-swatch pp-light-swatch" data-lpalette="emerald" title="Forest Emerald">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#F0FDF4"></span>-->
+<!--            <span style="background:#059669"></span>-->
+<!--            <span style="background:#052E16"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Emerald</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-light-swatch" data-lpalette="rose" title="Rose Quartz">
-          <span class="pp-swatch__colors">
-            <span style="background:#FFF1F2"></span>
-            <span style="background:#E11D48"></span>
-            <span style="background:#1C0A0E"></span>
-          </span>
-          <span class="pp-swatch__name">Rose</span>
-        </button>
+<!--        <button class="pp-swatch pp-light-swatch" data-lpalette="rose" title="Rose Quartz">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#FFF1F2"></span>-->
+<!--            <span style="background:#E11D48"></span>-->
+<!--            <span style="background:#1C0A0E"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Rose</span>-->
+<!--        </button>-->
 
-        <button class="pp-swatch pp-light-swatch" data-lpalette="warm" title="Warm Neutral">
-          <span class="pp-swatch__colors">
-            <span style="background:#FAFAF7"></span>
-            <span style="background:#D97706"></span>
-            <span style="background:#1C1917"></span>
-          </span>
-          <span class="pp-swatch__name">Warm</span>
-        </button>
+<!--        <button class="pp-swatch pp-light-swatch" data-lpalette="warm" title="Warm Neutral">-->
+<!--          <span class="pp-swatch__colors">-->
+<!--            <span style="background:#FAFAF7"></span>-->
+<!--            <span style="background:#D97706"></span>-->
+<!--            <span style="background:#1C1917"></span>-->
+<!--          </span>-->
+<!--          <span class="pp-swatch__name">Warm</span>-->
+<!--        </button>-->
 
-      </div>
-    </div>
-  </div>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <!-- ============================================================
        PRELOADER
@@ -261,6 +255,7 @@
           <a href="#process"    class="nav-link" data-section="process">Process</a>
           <a href="#why-us"     class="nav-link" data-section="why-us">Why Us</a>
           <a href="#portfolio"  class="nav-link" data-section="portfolio">Portfolio</a>
+          <a href="careers.html" class="nav-link">Careers</a>
           <a href="#contact"    class="nav-link" data-section="contact">Contact</a>
         </nav>
 
@@ -314,6 +309,7 @@
       <a href="#process"   class="mobile-nav-link">Process</a>
       <a href="#why-us"    class="mobile-nav-link">Why Us</a>
       <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="careers.html" class="mobile-nav-link">Careers</a>
       <a href="#contact"   class="mobile-nav-link">Contact</a>
     </nav>
     <a href="#contact" class="btn-primary mt-4" onclick="document.getElementById('mobile-menu').classList.remove('open')">Request Consultation</a>
@@ -763,6 +759,101 @@
       </div>
     </section>
 
+    <!-- ============================================================
+         PHOTO CAROUSEL
+    ============================================================ -->
+    <section id="showcase" class="photo-showcase py-24 lg:py-32 bg-slate-900/20" aria-labelledby="showcase-heading">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="photo-showcase__header reveal">
+          <div>
+            <span class="section-label">Inside Deepseed</span>
+            <h2 id="showcase-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
+              Engineering in <span class="gradient-text">Motion</span>
+            </h2>
+          </div>
+          <p class="text-slate-400 max-w-xl text-sm sm:text-base leading-relaxed">
+            A visual pass through our robotics labs, automation builds, software workbenches, and growth systems.
+          </p>
+        </div>
+
+        <div class="asset-carousel reveal" style="--delay:0.15s" role="region" aria-roledescription="carousel" aria-label="Deepseed photo showcase">
+          <div class="asset-carousel__viewport">
+            <div id="asset-carousel-track" class="asset-carousel__track">
+
+              <article class="asset-slide" aria-label="Robotics academy lab">
+                <img src="assets/images/svc-academy.jpg" alt="Students learning robotics in a Deepseed academy lab" loading="lazy"/>
+                <div class="asset-slide__scrim"></div>
+                <div class="asset-slide__content">
+                  <span>Academy</span>
+                  <h3>Robotics Skills Lab</h3>
+                  <p>Structured STEM sessions that turn curiosity into buildable systems.</p>
+                </div>
+              </article>
+
+              <article class="asset-slide" aria-label="Field robotics research">
+                <img src="assets/images/robot-field.jpg" alt="Autonomous field robotics research and testing" loading="lazy"/>
+                <div class="asset-slide__scrim"></div>
+                <div class="asset-slide__content">
+                  <span>Robotics R&amp;D</span>
+                  <h3>Autonomous Field Systems</h3>
+                  <p>Sensor-rich robotic platforms designed for real-world operating conditions.</p>
+                </div>
+              </article>
+
+              <article class="asset-slide" aria-label="Industrial automation systems">
+                <img src="assets/images/svc-automation.jpg" alt="Industrial automation machinery and control systems" loading="lazy"/>
+                <div class="asset-slide__scrim"></div>
+                <div class="asset-slide__content">
+                  <span>Automation</span>
+                  <h3>Smart Factory Builds</h3>
+                  <p>Workflow automation that improves safety, reliability, and throughput.</p>
+                </div>
+              </article>
+
+              <article class="asset-slide" aria-label="Software engineering workstation">
+                <img src="assets/images/workbench.jpg" alt="Engineering workstation for software and hardware development" loading="lazy"/>
+                <div class="asset-slide__scrim"></div>
+                <div class="asset-slide__content">
+                  <span>Software</span>
+                  <h3>Full-Stack Workbench</h3>
+                  <p>Clean digital products built alongside the hardware they control.</p>
+                </div>
+              </article>
+
+              <article class="asset-slide" aria-label="Digital growth dashboards">
+                <img src="assets/images/svc-mktdash.jpg" alt="Digital marketing dashboard and growth analytics" loading="lazy"/>
+                <div class="asset-slide__scrim"></div>
+                <div class="asset-slide__content">
+                  <span>Growth</span>
+                  <h3>Marketing Intelligence</h3>
+                  <p>Data-led funnels that connect technical products with qualified demand.</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="asset-carousel__controls">
+            <button id="asset-carousel-prev" class="asset-carousel__btn" type="button" aria-label="Previous photo">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11.25 4.5L6.75 9l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="asset-carousel__dots" role="group" aria-label="Photo carousel pagination">
+              <button class="asset-dot active" type="button" aria-label="Show photo 1" data-index="0"></button>
+              <button class="asset-dot" type="button" aria-label="Show photo 2" data-index="1"></button>
+              <button class="asset-dot" type="button" aria-label="Show photo 3" data-index="2"></button>
+              <button class="asset-dot" type="button" aria-label="Show photo 4" data-index="3"></button>
+              <button class="asset-dot" type="button" aria-label="Show photo 5" data-index="4"></button>
+            </div>
+
+            <button id="asset-carousel-next" class="asset-carousel__btn" type="button" aria-label="Next photo">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6.75 4.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ============================================================
@@ -1476,36 +1567,44 @@
           <!-- Right: Form -->
           <div class="reveal" style="--delay:0.15s">
             <div class="glass-card p-8">
-              <form id="contact-form" novalidate aria-label="Contact request form">
+              <form id="contact-form" action="https://formsubmit.co/a67419f1c973ed9a4d732d34ebc1314c" method="POST" aria-label="Contact request form">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Contact Request — Deepseed Technologies">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://deepseedtech.in/#contact">
+                <!-- Honeypot anti-spam -->
+                <input type="text" name="_honey" style="display:none">
+
                 <div class="grid sm:grid-cols-2 gap-5 mb-5">
                   <div class="form-group">
                     <label class="form-label" for="field-name">Full Name <span aria-hidden="true" class="text-red-400">*</span></label>
-                    <input type="text" id="field-name" class="form-input" placeholder="Your full name" autocomplete="name" required aria-required="true" aria-describedby="err-name"/>
+                    <input type="text" id="field-name" name="Full Name" class="form-input" placeholder="Your full name" autocomplete="name" required aria-required="true" aria-describedby="err-name"/>
                     <p class="form-error" id="err-name" role="alert" aria-live="polite"></p>
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="field-email">Business Email <span aria-hidden="true" class="text-red-400">*</span></label>
-                    <input type="email" id="field-email" class="form-input" placeholder="you@company.com" autocomplete="email" required aria-required="true" aria-describedby="err-email"/>
+                    <input type="email" id="field-email" name="Email" class="form-input" placeholder="you@company.com" autocomplete="email" required aria-required="true" aria-describedby="err-email"/>
                     <p class="form-error" id="err-email" role="alert" aria-live="polite"></p>
                   </div>
                 </div>
 
                 <div class="form-group mb-5">
                   <label class="form-label" for="field-service">Primary Area of Interest <span aria-hidden="true" class="text-red-400">*</span></label>
-                  <select id="field-service" class="form-input" required aria-required="true" aria-describedby="err-service" style="background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; appearance: none; -webkit-appearance: none; padding-right: 2.5rem;">
+                  <select id="field-service" name="Service Area" class="form-input" required aria-required="true" aria-describedby="err-service" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; appearance: none; -webkit-appearance: none; padding-right: 2.5rem;">
                     <option value="" disabled selected>Select a service...</option>
-                    <option value="academy">Robotics Skills Training Academy</option>
-                    <option value="rd">Robotics R&amp;D / Prototyping</option>
-                    <option value="automation">Industrial Automation Systems</option>
-                    <option value="software">Software (Web/Mobile) Development</option>
-                    <option value="marketing">Digital Marketing &amp; Funnel Setup</option>
+                    <option value="Robotics Skills Training Academy">Robotics Skills Training Academy</option>
+                    <option value="Robotics R&amp;D / Prototyping">Robotics R&amp;D / Prototyping</option>
+                    <option value="Industrial Automation Systems">Industrial Automation Systems</option>
+                    <option value="Software (Web/Mobile) Development">Software (Web/Mobile) Development</option>
+                    <option value="Digital Marketing &amp; Funnel Setup">Digital Marketing &amp; Funnel Setup</option>
                   </select>
                   <p class="form-error" id="err-service" role="alert" aria-live="polite"></p>
                 </div>
 
                 <div class="form-group mb-6">
                   <label class="form-label" for="field-message">Describe Your Project Goals <span aria-hidden="true" class="text-red-400">*</span></label>
-                  <textarea id="field-message" class="form-input resize-none" rows="4" placeholder="Briefly describe what you're looking to build or solve..." required aria-required="true" aria-describedby="err-message"></textarea>
+                  <textarea id="field-message" name="Message" class="form-input resize-none" rows="4" placeholder="Briefly describe what you're looking to build or solve..." required aria-required="true" aria-describedby="err-message"></textarea>
                   <p class="form-error" id="err-message" role="alert" aria-live="polite"></p>
                 </div>
 
@@ -1566,6 +1665,7 @@
             <li><a href="#portfolio"   class="footer-link hover:text-slate-100 transition-colors">Portfolio</a></li>
             <li><a href="#process"     class="footer-link hover:text-slate-100 transition-colors">Our Process</a></li>
             <li><a href="#faq"         class="footer-link hover:text-slate-100 transition-colors">FAQ</a></li>
+            <li><a href="careers.html" class="footer-link hover:text-slate-100 transition-colors">Careers</a></li>
             <li><a href="#contact"     class="footer-link hover:text-slate-100 transition-colors">Contact</a></li>
           </ul>
         </div>

@@ -345,6 +345,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ----------------------------------------------------------
+     PHOTO ASSET CAROUSEL
+  ---------------------------------------------------------- */
+  const assetTrack   = document.getElementById('asset-carousel-track');
+  const assetDots    = document.querySelectorAll('.asset-dot');
+  const assetPrevBtn = document.getElementById('asset-carousel-prev');
+  const assetNextBtn = document.getElementById('asset-carousel-next');
+
+  if (assetTrack && assetDots.length) {
+    let currentAsset = 0;
+    let assetTimer;
+    const totalAssets = assetDots.length;
+    const assetRegion = assetTrack.closest('.asset-carousel');
+
+    const goToAsset = (idx) => {
+      currentAsset = (idx + totalAssets) % totalAssets;
+      assetTrack.style.transform = `translateX(-${currentAsset * 100}%)`;
+      assetDots.forEach((dot, i) => {
+        const isActive = i === currentAsset;
+        dot.classList.toggle('active', isActive);
+        dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+    };
+
+    const nextAsset = () => goToAsset(currentAsset + 1);
+    const prevAsset = () => goToAsset(currentAsset - 1);
+    const stopAssetAuto = () => clearInterval(assetTimer);
+    const startAssetAuto = () => {
+      stopAssetAuto();
+      assetTimer = setInterval(nextAsset, 4500);
+    };
+
+    assetPrevBtn?.addEventListener('click', () => { stopAssetAuto(); prevAsset(); startAssetAuto(); });
+    assetNextBtn?.addEventListener('click', () => { stopAssetAuto(); nextAsset(); startAssetAuto(); });
+
+    assetDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        stopAssetAuto();
+        goToAsset(i);
+        startAssetAuto();
+      });
+    });
+
+    assetRegion?.addEventListener('mouseenter', stopAssetAuto);
+    assetRegion?.addEventListener('mouseleave', startAssetAuto);
+    assetRegion?.addEventListener('focusin', stopAssetAuto);
+    assetRegion?.addEventListener('focusout', startAssetAuto);
+
+    assetRegion?.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        stopAssetAuto();
+        nextAsset();
+        startAssetAuto();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        stopAssetAuto();
+        prevAsset();
+        startAssetAuto();
+      }
+    });
+
+    let assetTouchStartX = 0;
+    assetTrack.addEventListener('touchstart', e => {
+      assetTouchStartX = e.touches[0].clientX;
+      stopAssetAuto();
+    }, { passive: true });
+
+    assetTrack.addEventListener('touchend', e => {
+      const diff = assetTouchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) diff > 0 ? nextAsset() : prevAsset();
+      startAssetAuto();
+    }, { passive: true });
+
+    goToAsset(0);
+    startAssetAuto();
+  }
+
+
+  /* ----------------------------------------------------------
      TESTIMONIAL CAROUSEL
   ---------------------------------------------------------- */
   const track     = document.getElementById('testimonial-track');
@@ -417,92 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ----------------------------------------------------------
-     CONTACT FORM — Validation + EmailJS
-     Replace the three YOUR_* placeholders with your real IDs
-     from emailjs.com → Email Services / Email Templates
-  ---------------------------------------------------------- */
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz789'
 
-  const contactForm = document.getElementById('contact-form');
-
-  contactForm?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    let valid = true;
-
-    const fields = [
-      { id: 'name',    min: 2,          label: 'Please enter your full name.' },
-      { id: 'email',   type: 'email',   label: 'Please enter a valid email address.' },
-      { id: 'service', label: 'Please select an area of interest.' },
-      { id: 'message', min: 10,         label: 'Please briefly describe your project (min 10 chars).' },
-    ];
-
-    fields.forEach(f => {
-      const input = document.getElementById(`field-${f.id}`);
-      const err   = document.getElementById(`err-${f.id}`);
-      if (!input) return;
-
-      let ok = true;
-      if (f.type === 'email') {
-        ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-      } else if (f.min) {
-        ok = input.value.trim().length >= f.min;
-      } else {
-        ok = input.value.trim() !== '';
-      }
-
-      if (!ok) {
-        input.classList.add('error');
-        if (err) { err.textContent = f.label; err.classList.add('visible'); }
-        valid = false;
-      } else {
-        input.classList.remove('error');
-        if (err) err.classList.remove('visible');
-      }
-
-      input.addEventListener('input', () => {
-        input.classList.remove('error');
-        if (err) err.classList.remove('visible');
-      }, { once: true });
-    });
-
-    if (!valid) return;
-
-    // --- Send via EmailJS ---
-    const submitBtn   = contactForm.querySelector('[type="submit"]');
-    const originalTxt = submitBtn.innerHTML;
-
-    submitBtn.disabled   = true;
-    submitBtn.innerHTML  = '<svg class="animate-spin" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="2" stroke-dasharray="28" stroke-dashoffset="10"/></svg> Sending…';
-
-    const templateParams = {
-      from_name:    document.getElementById('field-name').value.trim(),
-      from_email:   document.getElementById('field-email').value.trim(),
-      service_area: document.getElementById('field-service').value,
-      message:      document.getElementById('field-message').value.trim(),
-      reply_to:     document.getElementById('field-email').value.trim(),
-    };
-
-    try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
-      contactForm.style.display = 'none';
-      document.getElementById('form-success')?.classList.remove('hidden');
-    } catch (err) {
-      console.error('EmailJS error:', err);
-      submitBtn.disabled  = false;
-      submitBtn.innerHTML = originalTxt;
-      // Show a generic error below the button
-      let errEl = document.getElementById('form-send-error');
-      if (!errEl) {
-        errEl = document.createElement('p');
-        errEl.id        = 'form-send-error';
-        errEl.className = 'text-red-400 text-sm mt-3 text-center';
-        submitBtn.parentNode.insertBefore(errEl, submitBtn.nextSibling);
-      }
-      errEl.textContent = 'Something went wrong. Please try again or email us directly.';
-    }
-  });
 
 
   /* ----------------------------------------------------------

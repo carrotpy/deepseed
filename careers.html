@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>Careers — Deepseed Technologies LLP | Join Our Robotics Team</title>
+  <meta name="description" content="Join Deepseed Technologies LLP — we're hiring Robotics Instructors and Robotics Trainers. Shape the next generation of engineers and work with cutting-edge autonomous systems." />
+  <meta name="keywords" content="robotics careers, robotics instructor, robotics trainer, STEM jobs, robotics teaching, Deepseed Technologies careers" />
+  <meta name="author" content="Deepseed Technologies LLP" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://deepseedtech.in/careers.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://deepseedtech.in/careers.html" />
+  <meta property="og:title"       content="Careers — Deepseed Technologies LLP" />
+  <meta property="og:description" content="We're hiring Robotics Instructors and Robotics Trainers. Join us and engineer the future." />
+  <meta property="og:image"       content="https://deepseedtech.in/assets/images/og-image.png" />
+  <meta property="og:site_name"   content="Deepseed Technologies" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   { DEFAULT: '#3B82F6', dark: '#1D4ED8', light: '#93C5FD' },
+            secondary: { DEFAULT: '#FFFFFF', dark: '#E2E8F0' },
+            accent:    { DEFAULT: '#60A5FA', dark: '#3B82F6' },
+            surface:   { DEFAULT: '#080C18', card: '#0D1526',  border: '#1E293B' },
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body:    ['Inter',         'sans-serif'],
+          },
+          maxWidth: { '8xl': '1400px' },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* ============================================================
+       CAREERS PAGE — Additional Styles
+       ============================================================ */
+
+    /* Hero background particle mesh */
+    .careers-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(139,92,246,0.06) 0%, transparent 50%),
+        var(--surface);
+    }
+
+    .careers-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(30, 41, 59, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 41, 59, 0.4) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* Animated gradient border for role cards */
+    .role-card {
+      position: relative;
+      background: rgba(13, 21, 38, 0.85);
+      border: 1px solid rgba(59,130,246,0.15);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), border-color 0.4s;
+    }
+
+    .role-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(139,92,246,0.2), rgba(6,182,212,0.15));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+
+    .role-card:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 32px 80px rgba(0,0,0,0.5),
+        0 0 60px rgba(59,130,246,0.08);
+      border-color: rgba(59,130,246,0.3);
+    }
+
+    .role-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Role number badge */
+    .role-number {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(139,92,246,0.08));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Requirement list styling */
+    .req-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      color: #94A3B8;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .req-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-l, #93C5FD));
+      box-shadow: 0 0 8px rgba(59,130,246,0.4);
+    }
+
+    /* Perk cards */
+    .perk-card {
+      background: rgba(13, 21, 38, 0.6);
+      border: 1px solid rgba(30, 41, 59, 0.8);
+      border-radius: 16px;
+      padding: 1.75rem;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+    }
+
+    .perk-card:hover {
+      border-color: rgba(59,130,246,0.3);
+      transform: translateY(-4px);
+      background: rgba(13, 21, 38, 0.9);
+    }
+
+    .perk-card__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      background: rgba(59,130,246,0.08);
+      border: 1px solid rgba(59,130,246,0.15);
+      color: var(--primary);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .perk-card:hover .perk-card__icon {
+      transform: scale(1.1);
+      box-shadow: 0 0 24px rgba(59,130,246,0.15);
+    }
+
+    /* Application form */
+    .career-form-input {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(30, 41, 59, 0.8);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      color: #F8FAFC;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+
+    .career-form-input::placeholder {
+      color: #475569;
+    }
+
+    .career-form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+    }
+
+    .career-form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #94A3B8;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Floating particles background */
+    .career-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .career-particles span {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(59,130,246,0.3);
+      animation: career-float var(--dur, 8s) ease-in-out infinite alternate;
+    }
+
+    @keyframes career-float {
+      0%   { transform: translate(0, 0) scale(1); opacity: 0.3; }
+      50%  { transform: translate(var(--tx, 20px), var(--ty, -30px)) scale(1.5); opacity: 0.7; }
+      100% { transform: translate(var(--tx2, -15px), var(--ty2, 25px)) scale(0.8); opacity: 0.2; }
+    }
+
+    /* Badge styling */
+    .career-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+    }
+
+    .career-badge--green {
+      background: rgba(16,185,129,0.1);
+      color: #34D399;
+      border: 1px solid rgba(16,185,129,0.22);
+    }
+
+    .career-badge--blue {
+      background: rgba(59,130,246,0.1);
+      color: #60A5FA;
+      border: 1px solid rgba(59,130,246,0.22);
+    }
+
+    .career-badge--violet {
+      background: rgba(139,92,246,0.1);
+      color: #A78BFA;
+      border: 1px solid rgba(139,92,246,0.22);
+    }
+
+    /* Section connector line */
+    .section-connector {
+      width: 1px;
+      height: 80px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, rgba(59,130,246,0.3), transparent);
+    }
+
+    /* Light mode overrides */
+    html.light .careers-hero {
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(139,92,246,0.04) 0%, transparent 50%),
+        #F8FAFC;
+    }
+
+    html.light .careers-hero::before {
+      background-image:
+        linear-gradient(rgba(203,213,225,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(203,213,225,0.4) 1px, transparent 1px);
+    }
+
+    html.light .role-card {
+      background: rgba(255,255,255,0.9);
+      border-color: rgba(203,213,225,0.6);
+    }
+
+    html.light .role-card:hover {
+      border-color: rgba(59,130,246,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    }
+
+    html.light .role-number {
+      background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.05));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    html.light .req-list li {
+      color: #475569;
+    }
+
+    html.light .perk-card {
+      background: rgba(255,255,255,0.8);
+      border-color: rgba(203,213,225,0.6);
+    }
+
+    html.light .perk-card:hover {
+      background: #FFFFFF;
+      border-color: rgba(59,130,246,0.3);
+    }
+
+    html.light .career-form-input {
+      background: #FFFFFF;
+      border-color: rgba(203,213,225,0.8);
+      color: #0F172A;
+    }
+
+    html.light .career-form-input::placeholder {
+      color: #94A3B8;
+    }
+
+    html.light .career-particles span {
+      background: rgba(59,130,246,0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-slate-100 font-body antialiased">
+
+  <!-- CURSOR GLOW -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION (same as index.html)
+  ============================================================ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center flex-shrink-0" aria-label="Deepseed Technologies — Home">
+          <img src="assets/images/logo-icon.png" alt="Deepseed Technologies" class="nav-logo-icon h-24 w-24 object-contain"/>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Primary navigation">
+          <a href="index.html#about"      class="nav-link">About</a>
+          <a href="index.html#services"   class="nav-link">Services</a>
+          <a href="index.html#process"    class="nav-link">Process</a>
+          <a href="index.html#why-us"     class="nav-link">Why Us</a>
+          <a href="index.html#portfolio"  class="nav-link">Portfolio</a>
+          <a href="careers.html" class="nav-link text-white">Careers</a>
+          <a href="index.html#contact"    class="nav-link">Contact</a>
+        </nav>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#apply" class="hidden md:inline-flex btn-primary text-sm py-2.5 px-5" aria-label="Apply now at Deepseed Technologies">
+            Apply Now
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <!-- Theme toggle -->
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+            <!-- Moon (shown in dark mode) -->
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M15.5 11.5A7 7 0 016.5 2.5a7 7 0 000 13 7 7 0 009-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!-- Sun (shown in light mode) -->
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.2 3.2l1.4 1.4M13.4 13.4l1.4 1.4M3.2 14.8l1.4-1.4M13.4 4.6l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- Hamburger -->
+          <button id="hamburger" class="hamburger lg:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="mobile-close" class="absolute top-5 right-5 p-2" aria-label="Close navigation menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center gap-3 mb-6 pt-1">
+      <img src="assets/images/logo-icon.png" alt="Deepseed Technologies" class="nav-logo-icon h-10 w-10 object-contain"/>
+      <img src="assets/images/logo-name.png" alt="" aria-hidden="true" class="nav-logo-name h-6 object-contain"/>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html"           class="mobile-nav-link">Home</a>
+      <a href="index.html#about"     class="mobile-nav-link">About</a>
+      <a href="index.html#services"  class="mobile-nav-link">Services</a>
+      <a href="index.html#process"   class="mobile-nav-link">Process</a>
+      <a href="index.html#why-us"    class="mobile-nav-link">Why Us</a>
+      <a href="index.html#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="careers.html"         class="mobile-nav-link">Careers</a>
+      <a href="index.html#contact"   class="mobile-nav-link">Contact</a>
+    </nav>
+    <a href="#apply" class="btn-primary mt-4" onclick="document.getElementById('mobile-menu').classList.remove('open')">Apply Now</a>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="main-content">
+
+    <!-- ============================================================
+         CAREERS HERO
+    ============================================================ -->
+    <section class="careers-hero min-h-[70vh] flex items-center pt-28 pb-20 lg:pt-36 lg:pb-28" aria-label="Careers hero">
+
+      <!-- Floating particles -->
+      <div class="career-particles" aria-hidden="true">
+        <span style="top:10%;left:15%;--dur:7s;--tx:30px;--ty:-20px;--tx2:-10px;--ty2:15px"></span>
+        <span style="top:25%;left:75%;--dur:9s;--tx:-25px;--ty:35px;--tx2:20px;--ty2:-15px"></span>
+        <span style="top:60%;left:30%;--dur:11s;--tx:15px;--ty:-40px;--tx2:-20px;--ty2:10px"></span>
+        <span style="top:40%;left:85%;--dur:6s;--tx:-30px;--ty:20px;--tx2:25px;--ty2:-30px"></span>
+        <span style="top:75%;left:50%;--dur:10s;--tx:20px;--ty:-25px;--tx2:-15px;--ty2:20px"></span>
+        <span style="top:15%;left:45%;--dur:8s;--tx:-10px;--ty:30px;--tx2:15px;--ty2:-20px"></span>
+        <span style="top:85%;left:20%;--dur:12s;--tx:25px;--ty:-15px;--tx2:-20px;--ty2:30px"></span>
+        <span style="top:50%;left:60%;--dur:7.5s;--tx:-20px;--ty:25px;--tx2:10px;--ty2:-10px"></span>
+      </div>
+
+      <!-- Background orbs -->
+      <div aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+        <!-- Badge -->
+        <div class="reveal inline-flex items-center gap-2 mb-6">
+          <span class="career-badge career-badge--green">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="#34D399"/></svg>
+            Actively Hiring
+          </span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="reveal section-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-slate-100 mb-6" style="--delay:0.1s">
+          Build the Future with<br class="hidden sm:block"/>
+          <span class="gradient-text">Deepseed Technologies</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="reveal text-slate-400 text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto" style="--delay:0.2s">
+          We're assembling a team of passionate robotics educators and trainers who want to 
+          <span class="text-blue-300 font-medium">shape the next generation of engineers</span>. 
+          If you thrive at the intersection of technology and education, we want you.
+        </p>
+
+        <!-- Stats row -->
+        <div class="reveal flex flex-wrap justify-center gap-4 mb-10" style="--delay:0.3s">
+          <span class="career-badge career-badge--blue">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6l3 3 5-5" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/></svg>
+            2 Open Roles
+          </span>
+          <span class="career-badge career-badge--violet">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Full-Time
+          </span>
+          <span class="career-badge career-badge--blue">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4" stroke="#60A5FA" stroke-width="1.2"/><path d="M6 3v3l2 2" stroke="#60A5FA" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Immediate Joining
+          </span>
+        </div>
+
+        <!-- CTA -->
+        <div class="reveal flex flex-wrap justify-center gap-4" style="--delay:0.4s">
+          <a href="#openings" class="btn-primary">
+            View Open Positions
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 2V12M3 8L7 12L11 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#apply" class="btn-ghost">
+            Apply Directly
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section connector -->
+    <div class="section-connector" aria-hidden="true"></div>
+
+    <!-- ============================================================
+         OPEN POSITIONS
+    ============================================================ -->
+    <section id="openings" class="py-24 lg:py-32 relative overflow-hidden" aria-labelledby="openings-heading">
+
+      <!-- Background glow -->
+      <div class="absolute top-1/3 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%);" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section header -->
+        <div class="text-center mb-16 reveal">
+          <span class="section-label">Open Positions</span>
+          <h2 id="openings-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
+            Current <span class="gradient-text">Openings</span>
+          </h2>
+          <p class="text-slate-400 max-w-xl mx-auto mt-4 text-sm leading-relaxed">
+            Join our team and help us build the next generation of robotics engineers and innovators.
+          </p>
+        </div>
+
+        <!-- Role Cards -->
+        <div class="grid lg:grid-cols-2 gap-8">
+
+          <!-- ── Role 1: Robotics Instructor ── -->
+          <article class="role-card p-8 lg:p-10 reveal" style="--delay:0s" aria-label="Robotics Instructor position">
+            <span class="role-number" aria-hidden="true">01</span>
+
+            <!-- Header -->
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                  <path d="M12 3L2 8l10 5 10-5-10-5z"/>
+                  <path d="M2 12l10 5 10-5"/>
+                  <path d="M2 17l10 5 10-5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-slate-100">Robotics Instructor</h3>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="career-badge career-badge--blue">Full-Time</span>
+                  <span class="career-badge career-badge--green">Actively Hiring</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Lead hands-on robotics workshops for students aged 7–18+. You'll design lesson plans, conduct live coding sessions with Arduino, Raspberry Pi, and Python, and mentor the next generation of builders and inventors.
+            </p>
+
+            <!-- Key tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-blue-500/8 text-blue-300 border border-blue-500/15">Arduino</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-violet-500/8 text-violet-300 border border-violet-500/15">Raspberry Pi</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-cyan-500/8 text-cyan-300 border border-cyan-500/15">Python</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-500/8 text-emerald-300 border border-emerald-500/15">Scratch</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-amber-500/8 text-amber-300 border border-amber-500/15">PictoBlox</span>
+            </div>
+
+            <!-- Requirements -->
+            <h4 class="font-heading font-semibold text-slate-200 text-sm uppercase tracking-wider mb-3">Key Responsibilities</h4>
+            <ul class="req-list space-y-2 mb-8">
+              <li>Design and deliver structured robotics curricula for multiple age groups</li>
+              <li>Conduct hands-on lab sessions with Arduino, Raspberry Pi, Scratch, and Python</li>
+              <li>Assess student progress and provide personalised mentorship</li>
+              <li>Create engaging project-based learning experiences</li>
+              <li>Collaborate with the R&D team to integrate real-world applications into lessons</li>
+            </ul>
+
+            <h4 class="font-heading font-semibold text-slate-200 text-sm uppercase tracking-wider mb-3">Qualifications</h4>
+            <ul class="req-list space-y-2 mb-8">
+              <li>B.E/B.Tech in Electronics, Mechatronics, Computer Science or related field</li>
+              <li>Strong proficiency in Arduino, Raspberry Pi, and Python programming</li>
+              <li>Passion for teaching and experience with young learners preferred</li>
+              <li>Excellent communication and classroom management skills</li>
+            </ul>
+
+            <!-- Apply CTA -->
+            <a href="#apply" class="btn-primary w-full justify-center py-3.5 text-base">
+              Apply for This Role
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- ── Role 2: Robotics Trainer ── -->
+          <article class="role-card p-8 lg:p-10 reveal" style="--delay:0.15s" aria-label="Robotics Trainer position">
+            <span class="role-number" aria-hidden="true">02</span>
+
+            <!-- Header -->
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-xl sm:text-2xl text-slate-100">Robotics Trainer</h3>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="career-badge career-badge--violet">Full-Time</span>
+                  <span class="career-badge career-badge--green">Actively Hiring</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Train educators, corporate teams, and workshop participants on robotics and automation concepts. You'll develop training materials, conduct bootcamps, and help scale our academy programs across multiple locations.
+            </p>
+
+            <!-- Key tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-violet-500/8 text-violet-300 border border-violet-500/15">Curriculum Design</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-blue-500/8 text-blue-300 border border-blue-500/15">IoT</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-cyan-500/8 text-cyan-300 border border-cyan-500/15">Embedded Systems</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-500/8 text-emerald-300 border border-emerald-500/15">ROS</span>
+              <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-amber-500/8 text-amber-300 border border-amber-500/15">Mentorship</span>
+            </div>
+
+            <!-- Requirements -->
+            <h4 class="font-heading font-semibold text-slate-200 text-sm uppercase tracking-wider mb-3">Key Responsibilities</h4>
+            <ul class="req-list space-y-2 mb-8">
+              <li>Develop comprehensive training modules for robotics and automation</li>
+              <li>Conduct bootcamps, workshops, and certification programs</li>
+              <li>Train and upskill other instructors and support staff</li>
+              <li>Manage training schedules and participant progress tracking</li>
+              <li>Partner with industry clients for customised corporate training programs</li>
+            </ul>
+
+            <h4 class="font-heading font-semibold text-slate-200 text-sm uppercase tracking-wider mb-3">Qualifications</h4>
+            <ul class="req-list space-y-2 mb-8">
+              <li>B.E/B.Tech in Robotics, Electronics, Mechatronics, or related discipline</li>
+              <li>2+ years experience in technical training or teaching</li>
+              <li>Deep knowledge of embedded systems, IoT, and robotics platforms</li>
+              <li>Strong presentation and facilitation skills for diverse audiences</li>
+            </ul>
+
+            <!-- Apply CTA -->
+            <a href="#apply" class="btn-primary w-full justify-center py-3.5 text-base" style="background:#8B5CF6">
+              Apply for This Role
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY JOIN US / PERKS
+    ============================================================ -->
+    <section class="py-24 lg:py-32 bg-slate-900/30 relative overflow-hidden" aria-labelledby="perks-heading">
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section header -->
+        <div class="text-center mb-16 reveal">
+          <span class="section-label">Why Join Us</span>
+          <h2 id="perks-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
+            More Than a <span class="gradient-text">Job</span>
+          </h2>
+          <p class="text-slate-400 max-w-xl mx-auto mt-4 text-sm leading-relaxed">
+            At Deepseed, you don't just work — you build, teach, and engineer the future alongside some of the most passionate minds in robotics.
+          </p>
+        </div>
+
+        <!-- Perks grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Perk 1 -->
+          <div class="perk-card reveal" style="--delay:0s">
+            <div class="perk-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 12l10 5 10-5"/>
+                <path d="M2 17l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-slate-100 mb-2">Cutting-Edge Labs</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Work with the latest robotics hardware, 3D printers, and automation platforms every day.</p>
+          </div>
+
+          <!-- Perk 2 -->
+          <div class="perk-card reveal" style="--delay:0.1s">
+            <div class="perk-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-slate-100 mb-2">Growth Path</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Clear career progression from trainer to lead instructor to head of academy programs.</p>
+          </div>
+
+          <!-- Perk 3 -->
+          <div class="perk-card reveal" style="--delay:0.2s">
+            <div class="perk-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-slate-100 mb-2">Flexible Hours</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Balanced schedules that respect your time — no burnout culture, just focused impact.</p>
+          </div>
+
+          <!-- Perk 4 -->
+          <div class="perk-card reveal" style="--delay:0.3s">
+            <div class="perk-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-slate-100 mb-2">Impact-Driven</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Directly shape the lives of 500+ students and see your teaching transform young minds.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         APPLICATION FORM
+    ============================================================ -->
+    <section id="apply" class="py-24 lg:py-32 relative overflow-hidden" aria-labelledby="apply-heading">
+
+      <!-- Background glow -->
+      <div class="absolute bottom-0 left-1/3 w-[600px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%);" aria-hidden="true"></div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Section header -->
+        <div class="text-center mb-12 reveal">
+          <span class="section-label">Apply Now</span>
+          <h2 id="apply-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
+            Ready to <span class="gradient-text">Join Us?</span>
+          </h2>
+          <p class="text-slate-400 max-w-xl mx-auto mt-4 text-sm leading-relaxed">
+            Fill out the form below and our team will get back to you within 48 hours.
+          </p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="role-card p-8 lg:p-10 reveal" style="--delay:0.1s">
+
+          <form id="career-form" action="https://formsubmit.co/a67419f1c973ed9a4d732d34ebc1314c" method="POST">
+
+            <!-- FormSubmit Configuration (hidden fields) -->
+            <input type="hidden" name="_subject" value="New Career Application — Deepseed Technologies">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://deepseedtech.in/careers.html#apply">
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="grid sm:grid-cols-2 gap-5 mb-5">
+              <!-- Full Name -->
+              <div>
+                <label class="career-form-label" for="career-name">Full Name <span class="text-red-400" aria-hidden="true">*</span></label>
+                <input type="text" id="career-name" name="Full Name" class="career-form-input" placeholder="Your full name" required aria-required="true" />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="career-form-label" for="career-email">Email Address <span class="text-red-400" aria-hidden="true">*</span></label>
+                <input type="email" id="career-email" name="Email" class="career-form-input" placeholder="you@email.com" required aria-required="true" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5 mb-5">
+              <!-- Phone -->
+              <div>
+                <label class="career-form-label" for="career-phone">Phone Number <span class="text-red-400" aria-hidden="true">*</span></label>
+                <input type="tel" id="career-phone" name="Phone Number" class="career-form-input" placeholder="+91 XXXXX XXXXX" required aria-required="true" />
+              </div>
+
+              <!-- Position -->
+              <div>
+                <label class="career-form-label" for="career-position">Position <span class="text-red-400" aria-hidden="true">*</span></label>
+                <select id="career-position" name="Position Applied For" class="career-form-input" required aria-required="true">
+                  <option value="" disabled selected>Select a position</option>
+                  <option value="Robotics Instructor">Robotics Instructor</option>
+                  <option value="Robotics Trainer">Robotics Trainer</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="mb-5">
+              <label class="career-form-label" for="career-experience">Years of Experience</label>
+              <select id="career-experience" name="Years of Experience" class="career-form-input">
+                <option value="" disabled selected>Select experience level</option>
+                <option value="Fresher (0-1 years)">Fresher (0–1 years)</option>
+                <option value="1-3 years">1–3 years</option>
+                <option value="3-5 years">3–5 years</option>
+                <option value="5+ years">5+ years</option>
+              </select>
+            </div>
+
+            <!-- Cover message -->
+            <div class="mb-6">
+              <label class="career-form-label" for="career-message">Why do you want to join Deepseed? <span class="text-red-400" aria-hidden="true">*</span></label>
+              <textarea id="career-message" name="Message" class="career-form-input resize-none" rows="4" placeholder="Tell us about your passion for robotics and teaching..." required aria-required="true"></textarea>
+            </div>
+
+            <!-- Resume upload note -->
+            <div class="flex items-start gap-3 mb-6 p-4 rounded-xl bg-blue-500/5 border border-blue-500/10">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="flex-shrink-0 mt-0.5" aria-hidden="true">
+                <circle cx="9" cy="9" r="7" stroke="#60A5FA" stroke-width="1.3"/>
+                <path d="M9 5.5v4M9 12v.5" stroke="#60A5FA" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                After submitting, our team will contact you via email. Please have your <span class="text-blue-300 font-medium">resume/CV ready</span> to share during the follow-up.
+              </p>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn-primary w-full justify-center py-3.5 text-base">
+              Submit Application
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (same as index.html)
+  ============================================================ -->
+  <footer class="border-t border-slate-800 pt-16 pb-8" aria-label="Site footer">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+        <!-- Brand -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-2.5 mb-4">
+            <img src="assets/images/logo-icon.png" alt="Deepseed Technologies" class="footer-logo h-24 w-24 object-contain"/>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-5">
+            Sowing Innovation. Engineering Reality.<br/>
+            An integrated technology ecosystem spanning robotics, software, automation, and digital growth.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Twitter/X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FFFFFF"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-heading font-600 text-slate-100 text-sm mb-5 uppercase tracking-widest text-xs">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html"           class="footer-link hover:text-slate-100 transition-colors">Home</a></li>
+            <li><a href="index.html#about"     class="footer-link hover:text-slate-100 transition-colors">About Us</a></li>
+            <li><a href="index.html#why-us"    class="footer-link hover:text-slate-100 transition-colors">Why Choose Us</a></li>
+            <li><a href="index.html#portfolio" class="footer-link hover:text-slate-100 transition-colors">Portfolio</a></li>
+            <li><a href="index.html#process"   class="footer-link hover:text-slate-100 transition-colors">Our Process</a></li>
+            <li><a href="index.html#faq"       class="footer-link hover:text-slate-100 transition-colors">FAQ</a></li>
+            <li><a href="careers.html"         class="footer-link hover:text-slate-100 transition-colors">Careers</a></li>
+            <li><a href="index.html#contact"   class="footer-link hover:text-slate-100 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="font-heading font-600 text-slate-100 text-xs mb-5 uppercase tracking-widest">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html#services" class="footer-link hover:text-slate-100 transition-colors">Robotics Training Academy</a></li>
+            <li><a href="index.html#services" class="footer-link hover:text-slate-100 transition-colors">Robotics R&amp;D</a></li>
+            <li><a href="index.html#services" class="footer-link hover:text-slate-100 transition-colors">Industrial Automation</a></li>
+            <li><a href="index.html#services" class="footer-link hover:text-slate-100 transition-colors">Software Development</a></li>
+            <li><a href="index.html#services" class="footer-link hover:text-slate-100 transition-colors">Digital Marketing</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="font-heading font-600 text-slate-100 text-xs mb-2 uppercase tracking-widest">Stay Updated</h3>
+          <p class="text-slate-500 text-sm mb-4">Get the latest in robotics, automation, and digital growth.</p>
+          <form id="newsletter-form" novalidate aria-label="Newsletter subscription">
+            <div class="flex gap-2">
+              <input type="email" class="newsletter-input" placeholder="you@email.com" aria-label="Email address for newsletter" autocomplete="email" required/>
+              <button type="submit" class="btn-primary py-2.5 px-4 flex-shrink-0 text-sm">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="sr-only">Subscribe</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400 text-sm">
+          &copy; <span id="copyright-year">2024</span> Deepseed Technologies LLP. All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-slate-400 text-sm hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="text-slate-400 text-sm hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="index.html#contact" class="text-slate-400 text-sm hover:text-slate-400 transition-colors">Contact Support</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Dynamic copyright year -->
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Inline JS for this page (theme, nav, scroll, form, reveal) -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    /* ------ THEME TOGGLE ------ */
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light') html.classList.add('light');
+    themeToggle?.addEventListener('click', () => {
+      html.classList.toggle('light');
+      localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    /* ------ CURSOR GLOW ------ */
+    const cursorGlow = document.getElementById('cursor-glow');
+    if (cursorGlow && window.matchMedia('(pointer: fine)').matches) {
+      let rafId;
+      document.addEventListener('mousemove', (e) => {
+        if (!rafId) {
+          rafId = requestAnimationFrame(() => {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top  = e.clientY + 'px';
+            rafId = null;
+          });
+        }
+      });
+      document.addEventListener('mouseleave', () => { cursorGlow.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { cursorGlow.style.opacity = '1'; });
+    } else if (cursorGlow) {
+      cursorGlow.style.display = 'none';
+    }
+
+    /* ------ NAVBAR SCROLL ------ */
+    const navbar = document.getElementById('navbar');
+    const handleNavScroll = () => {
+      if (window.scrollY > 50) navbar?.classList.add('scrolled');
+      else navbar?.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+
+    /* ------ MOBILE MENU ------ */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobile-menu');
+    const mobileClose = document.getElementById('mobile-close');
+
+    const openMenu  = () => { mobileMenu?.classList.add('open'); hamburger?.classList.add('open'); document.body.style.overflow = 'hidden'; };
+    const closeMenu = () => { mobileMenu?.classList.remove('open'); hamburger?.classList.remove('open'); document.body.style.overflow = ''; };
+
+    hamburger?.addEventListener('click', openMenu);
+    mobileClose?.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    /* ------ SMOOTH SCROLL ------ */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const navH = navbar ? navbar.offsetHeight : 80;
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navH, behavior: 'smooth' });
+        }
+      });
+    });
+
+    /* ------ SCROLL REVEAL ------ */
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+
+    /* ------ NEWSLETTER ------ */
+    document.getElementById('newsletter-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = e.target.querySelector('.newsletter-input');
+      const btn   = e.target.querySelector('button');
+      if (input && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+        if (btn) { btn.textContent = 'Subscribed!'; btn.disabled = true; }
+        input.value = '';
+      } else if (input) {
+        input.style.borderColor = '#EF4444';
+        setTimeout(() => { input.style.borderColor = ''; }, 2000);
+      }
+    });
+
+  });
+  </script>
+
+</body>
+</html>
