@@ -630,10 +630,107 @@
         </div>
       </div>
     </section>
+      <!-- ============================================================
+     PHOTO CAROUSEL
+     ============================================================ -->
+      <section id="showcase" class="photo-showcase py-24 lg:py-32 bg-slate-900/20" aria-labelledby="showcase-heading">
+          <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- ============================================================
-         SERVICES — TABBED PANEL
-    ============================================================ -->
+              <div class="photo-showcase__header reveal">
+                  <div>
+                      <span class="section-label">Inside Deepseed</span>
+                      <h2 id="showcase-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
+                          Engineering in <span class="gradient-text">Motion</span>
+                      </h2>
+                  </div>
+                  <p class="text-slate-400 max-w-xl text-sm sm:text-base leading-relaxed">
+                      A visual pass through our robotics labs, automation builds, software workbenches, and growth systems.
+                  </p>
+              </div>
+
+              <div class="asset-carousel reveal" style="--delay:0.15s" role="region" aria-roledescription="carousel" aria-label="Deepseed photo showcase">
+                  <div class="asset-carousel__viewport">
+                      <div id="asset-carousel-track" class="asset-carousel__track">
+
+                          <article class="asset-slide" aria-label="Robotics academy lab">
+                              <img src="assets/images/svc-academy.jpg" alt="Students learning robotics in a Deepseed academy lab" loading="lazy"/>
+                              <div class="asset-slide__scrim"></div>
+                              <div class="asset-slide__content">
+                                  <span>Academy</span>
+                                  <h3>Robotics Skills Lab</h3>
+                                  <p>Structured STEM sessions that turn curiosity into buildable systems.</p>
+                              </div>
+                          </article>
+
+                          <article class="asset-slide" aria-label="Field robotics research">
+                              <img src="assets/images/robot-field.jpg" alt="Autonomous field robotics research and testing" loading="lazy"/>
+                              <div class="asset-slide__scrim"></div>
+                              <div class="asset-slide__content">
+                                  <span>Robotics R&amp;D</span>
+                                  <h3>Autonomous Field Systems</h3>
+                                  <p>Sensor-rich robotic platforms designed for real-world operating conditions.</p>
+                              </div>
+                          </article>
+
+                          <article class="asset-slide" aria-label="Industrial automation systems">
+                              <img src="assets/images/svc-automation.jpg" alt="Industrial automation machinery and control systems" loading="lazy"/>
+                              <div class="asset-slide__scrim"></div>
+                              <div class="asset-slide__content">
+                                  <span>Automation</span>
+                                  <h3>Smart Factory Builds</h3>
+                                  <p>Workflow automation that improves safety, reliability, and throughput.</p>
+                              </div>
+                          </article>
+
+                          <article class="asset-slide" aria-label="Software engineering workstation">
+                              <img src="assets/images/workbench.jpg" alt="Engineering workstation for software and hardware development" loading="lazy"/>
+                              <div class="asset-slide__scrim"></div>
+                              <div class="asset-slide__content">
+                                  <span>Software</span>
+                                  <h3>Full-Stack Workbench</h3>
+                                  <p>Clean digital products built alongside the hardware they control.</p>
+                              </div>
+                          </article>
+
+                          <article class="asset-slide" aria-label="Digital growth dashboards">
+                              <img src="assets/images/svc-mktdash.jpg" alt="Digital marketing dashboard and growth analytics" loading="lazy"/>
+                              <div class="asset-slide__scrim"></div>
+                              <div class="asset-slide__content">
+                                  <span>Growth</span>
+                                  <h3>Marketing Intelligence</h3>
+                                  <p>Data-led funnels that connect technical products with qualified demand.</p>
+                              </div>
+                          </article>
+
+                      </div>
+                  </div>
+
+                  <div class="asset-carousel__controls">
+                      <button id="asset-carousel-prev" class="asset-carousel__btn" type="button" aria-label="Previous photo">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11.25 4.5L6.75 9l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+
+                      <div class="asset-carousel__dots" role="group" aria-label="Photo carousel pagination">
+                          <button class="asset-dot active" type="button" aria-label="Show photo 1" data-index="0"></button>
+                          <button class="asset-dot" type="button" aria-label="Show photo 2" data-index="1"></button>
+                          <button class="asset-dot" type="button" aria-label="Show photo 3" data-index="2"></button>
+                          <button class="asset-dot" type="button" aria-label="Show photo 4" data-index="3"></button>
+                          <button class="asset-dot" type="button" aria-label="Show photo 5" data-index="4"></button>
+                      </div>
+
+                      <button id="asset-carousel-next" class="asset-carousel__btn" type="button" aria-label="Next photo">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6.75 4.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+
+
+      <!-- ============================================================
+           SERVICES — TABBED PANEL
+      ============================================================ -->
     <section id="services" class="py-24 lg:py-32 bg-slate-900/30" aria-labelledby="services-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -759,102 +856,6 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         PHOTO CAROUSEL
-    ============================================================ -->
-    <section id="showcase" class="photo-showcase py-24 lg:py-32 bg-slate-900/20" aria-labelledby="showcase-heading">
-      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="photo-showcase__header reveal">
-          <div>
-            <span class="section-label">Inside Deepseed</span>
-            <h2 id="showcase-heading" class="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3">
-              Engineering in <span class="gradient-text">Motion</span>
-            </h2>
-          </div>
-          <p class="text-slate-400 max-w-xl text-sm sm:text-base leading-relaxed">
-            A visual pass through our robotics labs, automation builds, software workbenches, and growth systems.
-          </p>
-        </div>
-
-        <div class="asset-carousel reveal" style="--delay:0.15s" role="region" aria-roledescription="carousel" aria-label="Deepseed photo showcase">
-          <div class="asset-carousel__viewport">
-            <div id="asset-carousel-track" class="asset-carousel__track">
-
-              <article class="asset-slide" aria-label="Robotics academy lab">
-                <img src="assets/images/svc-academy.jpg" alt="Students learning robotics in a Deepseed academy lab" loading="lazy"/>
-                <div class="asset-slide__scrim"></div>
-                <div class="asset-slide__content">
-                  <span>Academy</span>
-                  <h3>Robotics Skills Lab</h3>
-                  <p>Structured STEM sessions that turn curiosity into buildable systems.</p>
-                </div>
-              </article>
-
-              <article class="asset-slide" aria-label="Field robotics research">
-                <img src="assets/images/robot-field.jpg" alt="Autonomous field robotics research and testing" loading="lazy"/>
-                <div class="asset-slide__scrim"></div>
-                <div class="asset-slide__content">
-                  <span>Robotics R&amp;D</span>
-                  <h3>Autonomous Field Systems</h3>
-                  <p>Sensor-rich robotic platforms designed for real-world operating conditions.</p>
-                </div>
-              </article>
-
-              <article class="asset-slide" aria-label="Industrial automation systems">
-                <img src="assets/images/svc-automation.jpg" alt="Industrial automation machinery and control systems" loading="lazy"/>
-                <div class="asset-slide__scrim"></div>
-                <div class="asset-slide__content">
-                  <span>Automation</span>
-                  <h3>Smart Factory Builds</h3>
-                  <p>Workflow automation that improves safety, reliability, and throughput.</p>
-                </div>
-              </article>
-
-              <article class="asset-slide" aria-label="Software engineering workstation">
-                <img src="assets/images/workbench.jpg" alt="Engineering workstation for software and hardware development" loading="lazy"/>
-                <div class="asset-slide__scrim"></div>
-                <div class="asset-slide__content">
-                  <span>Software</span>
-                  <h3>Full-Stack Workbench</h3>
-                  <p>Clean digital products built alongside the hardware they control.</p>
-                </div>
-              </article>
-
-              <article class="asset-slide" aria-label="Digital growth dashboards">
-                <img src="assets/images/svc-mktdash.jpg" alt="Digital marketing dashboard and growth analytics" loading="lazy"/>
-                <div class="asset-slide__scrim"></div>
-                <div class="asset-slide__content">
-                  <span>Growth</span>
-                  <h3>Marketing Intelligence</h3>
-                  <p>Data-led funnels that connect technical products with qualified demand.</p>
-                </div>
-              </article>
-
-            </div>
-          </div>
-
-          <div class="asset-carousel__controls">
-            <button id="asset-carousel-prev" class="asset-carousel__btn" type="button" aria-label="Previous photo">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11.25 4.5L6.75 9l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-
-            <div class="asset-carousel__dots" role="group" aria-label="Photo carousel pagination">
-              <button class="asset-dot active" type="button" aria-label="Show photo 1" data-index="0"></button>
-              <button class="asset-dot" type="button" aria-label="Show photo 2" data-index="1"></button>
-              <button class="asset-dot" type="button" aria-label="Show photo 3" data-index="2"></button>
-              <button class="asset-dot" type="button" aria-label="Show photo 4" data-index="3"></button>
-              <button class="asset-dot" type="button" aria-label="Show photo 5" data-index="4"></button>
-            </div>
-
-            <button id="asset-carousel-next" class="asset-carousel__btn" type="button" aria-label="Next photo">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6.75 4.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <!-- ============================================================
          PROCESS
@@ -1178,8 +1179,20 @@
         </div>
 
         <!-- Portfolio Grid -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"> <article class="reveal portfolio-card" data-category="robotics" style="--delay:0.4s" aria-label="Robotics Academy Platform project">
+            <div class="portfolio-image">
+                <img src="assets/images/svc-labwork.jpg" alt="Academy Learning Platform" class="w-full h-full object-cover" loading="lazy"/>
+                <div class="portfolio-overlay">
+                    <span class="tag-pill bg-accent/20 text-accent border border-accent/30 mb-2">Robotics</span>
+                    <p class="text-white font-heading font-600 text-center px-4">Academy Learning Platform</p>
+                </div>
+            </div>
+            <div class="p-5 bg-surface-card/60 portfolio-card__body">
+                <span class="tag-pill bg-blue-400/10 text-blue-300 border border-blue-400/20 text-xs mb-2 inline-block">Robotics</span>
+                <h3 class="font-heading font-600 text-slate-100 mb-1">Academy Learning Platform</h3>
+                <p class="text-slate-500 text-sm">Curriculum management system serving 500+ students across 3 cities.</p>
+            </div>
+        </article>
           <article class="reveal portfolio-card" data-category="robotics" style="--delay:0s" aria-label="Autonomous Field Robot project">
             <div class="portfolio-image">
               <img src="assets/images/svc-rd.jpg" alt="Autonomous Field Robot" class="w-full h-full object-cover" loading="lazy"/>
@@ -1240,21 +1253,6 @@
             </div>
           </article>
 
-          <article class="reveal portfolio-card" data-category="robotics" style="--delay:0.4s" aria-label="Robotics Academy Platform project">
-            <div class="portfolio-image">
-              <img src="assets/images/svc-labwork.jpg" alt="Academy Learning Platform" class="w-full h-full object-cover" loading="lazy"/>
-              <div class="portfolio-overlay">
-                <span class="tag-pill bg-accent/20 text-accent border border-accent/30 mb-2">Robotics</span>
-                <p class="text-white font-heading font-600 text-center px-4">Academy Learning Platform</p>
-              </div>
-            </div>
-            <div class="p-5 bg-surface-card/60 portfolio-card__body">
-              <span class="tag-pill bg-blue-400/10 text-blue-300 border border-blue-400/20 text-xs mb-2 inline-block">Robotics</span>
-              <h3 class="font-heading font-600 text-slate-100 mb-1">Academy Learning Platform</h3>
-              <p class="text-slate-500 text-sm">Curriculum management system serving 500+ students across 3 cities.</p>
-            </div>
-          </article>
-
           <article class="reveal portfolio-card" data-category="software" style="--delay:0.5s" aria-label="Mobile Control App project">
             <div class="portfolio-image">
               <img src="assets/images/svc-assembly.jpg" alt="Mobile Control App" class="w-full h-full object-cover" loading="lazy"/>
@@ -1277,132 +1275,132 @@
     <!-- ============================================================
          TESTIMONIALS
     ============================================================ -->
-    <section id="testimonials" class="py-24 lg:py-32" aria-labelledby="testimonials-heading">
-      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+<!--    <section id="testimonials" class="py-24 lg:py-32" aria-labelledby="testimonials-heading">-->
+<!--      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">-->
 
-        <div class="text-center mb-14">
-          <span class="section-label reveal">Social Proof</span>
-          <h2 id="testimonials-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="--delay:0.1s">
-            Trusted by <span class="gradient-text">Innovators</span>
-          </h2>
-        </div>
+<!--        <div class="text-center mb-14">-->
+<!--          <span class="section-label reveal">Social Proof</span>-->
+<!--          <h2 id="testimonials-heading" class="reveal section-title text-3xl sm:text-4xl lg:text-5xl text-slate-100 mt-3 mb-4" style="&#45;&#45;delay:0.1s">-->
+<!--            Trusted by <span class="gradient-text">Innovators</span>-->
+<!--          </h2>-->
+<!--        </div>-->
 
         <!-- Carousel -->
-        <div class="relative max-w-3xl mx-auto" role="region" aria-label="Client testimonials">
-          <div class="overflow-hidden rounded-2xl">
-            <div id="testimonial-track" class="testimonial-track" role="list">
+<!--        <div class="relative max-w-3xl mx-auto" role="region" aria-label="Client testimonials">-->
+<!--          <div class="overflow-hidden rounded-2xl">-->
+<!--            <div id="testimonial-track" class="testimonial-track" role="list">-->
 
-              <div class="testimonial-card" role="listitem">
-                <div class="testimonial-inner">
-                  <div class="flex items-center gap-3 mb-4">
-                    <div class="avatar-circle bg-gradient-to-br from-primary to-accent" aria-hidden="true">RK</div>
-                    <div>
-                      <p class="font-heading font-600 text-slate-100">Rahul Krishnamurthy</p>
-                      <p class="text-slate-500 text-sm">Operations Director, ManufacturePro</p>
-                    </div>
-                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                    </div>
-                  </div>
-                  <blockquote class="text-slate-400 leading-relaxed italic">
-                    "Deepseed completely transformed our production line. What used to take 8 operators now runs autonomously with zero downtime. The ROI was visible within the first quarter."
-                  </blockquote>
-                </div>
-              </div>
+<!--              <div class="testimonial-card" role="listitem">-->
+<!--                <div class="testimonial-inner">-->
+<!--                  <div class="flex items-center gap-3 mb-4">-->
+<!--                    <div class="avatar-circle bg-gradient-to-br from-primary to-accent" aria-hidden="true">RK</div>-->
+<!--                    <div>-->
+<!--                      <p class="font-heading font-600 text-slate-100">Rahul Krishnamurthy</p>-->
+<!--                      <p class="text-slate-500 text-sm">Operations Director, ManufacturePro</p>-->
+<!--                    </div>-->
+<!--                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <blockquote class="text-slate-400 leading-relaxed italic">-->
+<!--                    "Deepseed completely transformed our production line. What used to take 8 operators now runs autonomously with zero downtime. The ROI was visible within the first quarter."-->
+<!--                  </blockquote>-->
+<!--                </div>-->
+<!--              </div>-->
 
-              <div class="testimonial-card" role="listitem">
-                <div class="testimonial-inner">
-                  <div class="flex items-center gap-3 mb-4">
-                    <div class="avatar-circle bg-gradient-to-br from-accent to-secondary" aria-hidden="true">PS</div>
-                    <div>
-                      <p class="font-heading font-600 text-slate-100">Priya Sundaram</p>
-                      <p class="text-slate-500 text-sm">Principal, Innovate Academy</p>
-                    </div>
-                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                    </div>
-                  </div>
-                  <blockquote class="text-slate-400 leading-relaxed italic">
-                    "The robotics training program is extraordinary. Students who had never touched a microcontroller were building functional bots by week three. Parent feedback has been overwhelmingly positive."
-                  </blockquote>
-                </div>
-              </div>
+<!--              <div class="testimonial-card" role="listitem">-->
+<!--                <div class="testimonial-inner">-->
+<!--                  <div class="flex items-center gap-3 mb-4">-->
+<!--                    <div class="avatar-circle bg-gradient-to-br from-accent to-secondary" aria-hidden="true">PS</div>-->
+<!--                    <div>-->
+<!--                      <p class="font-heading font-600 text-slate-100">Priya Sundaram</p>-->
+<!--                      <p class="text-slate-500 text-sm">Principal, Innovate Academy</p>-->
+<!--                    </div>-->
+<!--                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <blockquote class="text-slate-400 leading-relaxed italic">-->
+<!--                    "The robotics training program is extraordinary. Students who had never touched a microcontroller were building functional bots by week three. Parent feedback has been overwhelmingly positive."-->
+<!--                  </blockquote>-->
+<!--                </div>-->
+<!--              </div>-->
 
-              <div class="testimonial-card" role="listitem">
-                <div class="testimonial-inner">
-                  <div class="flex items-center gap-3 mb-4">
-                    <div class="avatar-circle bg-gradient-to-br from-secondary to-primary" aria-hidden="true">AV</div>
-                    <div>
-                      <p class="font-heading font-600 text-slate-100">Arvind Venkatesh</p>
-                      <p class="text-slate-500 text-sm">Founder &amp; CEO, ScaleUp Ventures</p>
-                    </div>
-                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                    </div>
-                  </div>
-                  <blockquote class="text-slate-400 leading-relaxed italic">
-                    "The digital marketing funnel Deepseed built for us generates 3x more qualified leads than everything we were doing before — at half the ad spend. Genuinely impressive engineering."
-                  </blockquote>
-                </div>
-              </div>
+<!--              <div class="testimonial-card" role="listitem">-->
+<!--                <div class="testimonial-inner">-->
+<!--                  <div class="flex items-center gap-3 mb-4">-->
+<!--                    <div class="avatar-circle bg-gradient-to-br from-secondary to-primary" aria-hidden="true">AV</div>-->
+<!--                    <div>-->
+<!--                      <p class="font-heading font-600 text-slate-100">Arvind Venkatesh</p>-->
+<!--                      <p class="text-slate-500 text-sm">Founder &amp; CEO, ScaleUp Ventures</p>-->
+<!--                    </div>-->
+<!--                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <blockquote class="text-slate-400 leading-relaxed italic">-->
+<!--                    "The digital marketing funnel Deepseed built for us generates 3x more qualified leads than everything we were doing before — at half the ad spend. Genuinely impressive engineering."-->
+<!--                  </blockquote>-->
+<!--                </div>-->
+<!--              </div>-->
 
-              <div class="testimonial-card" role="listitem">
-                <div class="testimonial-inner">
-                  <div class="flex items-center gap-3 mb-4">
-                    <div class="avatar-circle bg-gradient-to-br from-primary/80 to-secondary" aria-hidden="true">MN</div>
-                    <div>
-                      <p class="font-heading font-600 text-slate-100">Meera Nair</p>
-                      <p class="text-slate-500 text-sm">CTO, Nexus Systems</p>
-                    </div>
-                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>
-                    </div>
-                  </div>
-                  <blockquote class="text-slate-400 leading-relaxed italic">
-                    "Clean code, clear documentation, on-time delivery. Deepseed's software team is the most professional vendor we've worked with. The mobile app they built for us scaled from day one."
-                  </blockquote>
-                </div>
-              </div>
+<!--              <div class="testimonial-card" role="listitem">-->
+<!--                <div class="testimonial-inner">-->
+<!--                  <div class="flex items-center gap-3 mb-4">-->
+<!--                    <div class="avatar-circle bg-gradient-to-br from-primary/80 to-secondary" aria-hidden="true">MN</div>-->
+<!--                    <div>-->
+<!--                      <p class="font-heading font-600 text-slate-100">Meera Nair</p>-->
+<!--                      <p class="text-slate-500 text-sm">CTO, Nexus Systems</p>-->
+<!--                    </div>-->
+<!--                    <div class="ml-auto flex gap-0.5" aria-label="5 out of 5 stars">-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                      <span class="text-yellow-400 text-sm" aria-hidden="true">★</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <blockquote class="text-slate-400 leading-relaxed italic">-->
+<!--                    "Clean code, clear documentation, on-time delivery. Deepseed's software team is the most professional vendor we've worked with. The mobile app they built for us scaled from day one."-->
+<!--                  </blockquote>-->
+<!--                </div>-->
+<!--              </div>-->
 
-            </div>
-          </div>
+<!--            </div>-->
+<!--          </div>-->
 
-          <!-- Controls -->
-          <div class="flex items-center justify-center gap-4 mt-8">
-            <button id="testimonial-prev" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all" aria-label="Previous testimonial">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
+<!--          &lt;!&ndash; Controls &ndash;&gt;-->
+<!--          <div class="flex items-center justify-center gap-4 mt-8">-->
+<!--            <button id="testimonial-prev" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all" aria-label="Previous testimonial">-->
+<!--              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>-->
+<!--            </button>-->
 
-            <div class="flex gap-2" role="group" aria-label="Testimonial pagination">
-              <button class="dot-indicator active" aria-label="Testimonial 1" data-index="0"></button>
-              <button class="dot-indicator" aria-label="Testimonial 2" data-index="1"></button>
-              <button class="dot-indicator" aria-label="Testimonial 3" data-index="2"></button>
-              <button class="dot-indicator" aria-label="Testimonial 4" data-index="3"></button>
-            </div>
+<!--            <div class="flex gap-2" role="group" aria-label="Testimonial pagination">-->
+<!--              <button class="dot-indicator active" aria-label="Testimonial 1" data-index="0"></button>-->
+<!--              <button class="dot-indicator" aria-label="Testimonial 2" data-index="1"></button>-->
+<!--              <button class="dot-indicator" aria-label="Testimonial 3" data-index="2"></button>-->
+<!--              <button class="dot-indicator" aria-label="Testimonial 4" data-index="3"></button>-->
+<!--            </div>-->
 
-            <button id="testimonial-next" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all" aria-label="Next testimonial">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--            <button id="testimonial-next" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all" aria-label="Next testimonial">-->
+<!--              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
 
     <!-- ============================================================
          FAQ
@@ -1548,16 +1546,17 @@
             <div class="glass-card p-6">
               <h3 class="font-heading font-600 text-slate-100 mb-4">Follow Us</h3>
               <div class="flex gap-3">
-                <a href="#" class="social-icon" aria-label="Deepseed Technologies on LinkedIn">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
+<!--                <a href="#" class="social-icon" aria-label="Deepseed Technologies on LinkedIn">-->
+<!--                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>-->
+<!--                </a>-->
                 <a href="#" class="social-icon" aria-label="Deepseed Technologies on Twitter/X">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
-                <a href="#" class="social-icon" aria-label="Deepseed Technologies on Instagram">
+                <a href="https://www.instagram.com/deepseedtechnologies/
+" class="social-icon" aria-label="Deepseed Technologies on Instagram">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 </a>
-                <a href="#" class="social-icon" aria-label="Deepseed Technologies on YouTube">
+                <a href="" class="social-icon" aria-label="Deepseed Technologies on YouTube">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FFFFFF"/></svg>
                 </a>
               </div>
@@ -1648,10 +1647,15 @@
             An integrated technology ecosystem spanning robotics, software, automation, and digital growth.
           </p>
           <div class="flex gap-3">
-            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="#" class="social-icon" aria-label="Twitter/X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" class="social-icon" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="#" class="social-icon" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FFFFFF"/></svg></a>
+<!--            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>-->
+              <a href="https://www.facebook.com/share/1B7AMySSje/
+" class="social-icon" aria-label="Facebook">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                  </svg>
+              </a>            <a href="https://www.instagram.com/deepseedtechnologies/
+" class="social-icon" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://youtube.com/@deepseedtechnologies?si=y0dHy3UMIq2wtSLM" class="social-icon" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FFFFFF"/></svg></a>
           </div>
         </div>
 
