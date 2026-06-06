@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const html = document.documentElement;
 
-  // Restore saved theme
-  if (localStorage.getItem('theme') === 'light') {
+  // Restore saved theme (default: light)
+  if (localStorage.getItem('theme') !== 'dark') {
     html.classList.add('light');
   }
 

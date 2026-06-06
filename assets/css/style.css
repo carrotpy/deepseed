@@ -2805,3 +2805,53 @@ html.light .pp-swatch__colors { border-color: rgba(0,0,0,0.08); }
   color: var(--dp-text, #F8FAFC);
 }
 html.light .pp-swatch__name { color: var(--lp-text, #0F172A); }
+
+/* ============================================================
+   GOOGLE MAPS EMBED
+   ============================================================ */
+.map-embed-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.map-embed-wrapper iframe {
+  display: block;
+  width: 100%;
+  min-height: 340px;
+  filter: saturate(0.85) contrast(1.1) brightness(0.75) hue-rotate(200deg);
+  transition: filter 0.4s ease;
+}
+
+.map-embed-wrapper:hover iframe {
+  filter: saturate(1) contrast(1) brightness(0.85) hue-rotate(200deg);
+}
+
+#location-map {
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+#location-map:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.08);
+}
+
+/* Light mode adjustments */
+html.light .map-embed-wrapper iframe {
+  filter: saturate(1) contrast(1) brightness(1) hue-rotate(0deg);
+}
+
+html.light .map-embed-wrapper:hover iframe {
+  filter: saturate(1.1) contrast(1.05) brightness(1) hue-rotate(0deg);
+}
+
+html.light .map-embed-wrapper {
+  border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+  .map-embed-wrapper iframe {
+    min-height: 260px;
+    height: 260px;
+  }
+}
